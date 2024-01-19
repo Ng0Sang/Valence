@@ -1,5 +1,4 @@
 // const { response } = require("express");
-
 let searchInput = "";
 
 document
@@ -51,7 +50,7 @@ async function searchKit() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   async function fetchKits() {
     try {
       const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
@@ -107,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  fetchKits();
-});
+// });
+fetchKits();
 
 function seeKitDetails(kit) {
   // const doctor_id = sessionStorage.getItem("doctor_id");
