@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const user_id = sessionStorage.getItem("user_id");
     try {
       const response = await fetch(
-        `http://localhost:3000/doctor/getbookeddoctor/${user_id}`
+        `https://valence-j2y3.onrender.com/doctor/getbookeddoctor/${user_id}`
       );
 
       if (response.ok) {

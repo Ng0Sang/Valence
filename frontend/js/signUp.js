@@ -100,13 +100,16 @@ async function signUpUser() {
   };
   // console.log(data);
   try {
-    const response = await fetch(`http://localhost:3000/auth/signup`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(
+      `https://valence-j2y3.onrender.com/auth/signup`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
     console.log(response);
     console.log(role);
 

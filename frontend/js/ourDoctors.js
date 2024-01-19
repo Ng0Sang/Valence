@@ -16,7 +16,7 @@ async function searchDoctors() {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/doctor/getdoctor/${searchInput}`
+      `https://valence-j2y3.onrender.com/doctor/getdoctor/${searchInput}`
     );
 
     // console.log(response);
@@ -51,7 +51,7 @@ async function searchDoctors() {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/doctor/getsingledoctor/${searchInput}`
+      `https://valence-j2y3.onrender.com/doctor/getsingledoctor/${searchInput}`
     );
 
     // console.log(response);
@@ -88,7 +88,7 @@ async function searchDoctors() {
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchDoctors() {
     try {
-      const response = await fetch(`http://localhost:3000/doctor/`);
+      const response = await fetch(`https://valence-j2y3.onrender.com/doctor/`);
 
       if (response.ok) {
         const data = await response.json();
@@ -203,11 +203,14 @@ async function bookDoctor(doctor_id) {
     console.log(doctorData);
     alert(doctorData);
     try {
-      const response = await fetch(`http://localhost:3000/doctor/bookdoctor/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(doctorData),
-      });
+      const response = await fetch(
+        `https://valence-j2y3.onrender.com/doctor/bookdoctor/`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(doctorData),
+        }
+      );
 
       if (response.status === 201) {
         alert("Doctor added to booked doctors sucessfully");
@@ -237,11 +240,14 @@ async function postUserSymptoms() {
       patient_gender,
     };
 
-    const response = await fetch(`http://localhost:3000/user/patientsymptoms`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(userData),
-    });
+    const response = await fetch(
+      `https://valence-j2y3.onrender.com/user/patientsymptoms`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userData),
+      }
+    );
 
     if (response.status === 201) {
       alert("Your Information have been stored successfully");
