@@ -58,7 +58,7 @@ async function updatePatient() {
     };
 
     const updateResponse = await fetch(
-      `http://localhost:3000/user/updatepatient/${user_id}`,
+      `https://valence-j2y3.onrender.com/user/updatepatient/${user_id}`,
       {
         method: "PATCH",
         headers: {
@@ -116,7 +116,6 @@ async function populateUpdatedDetails() {
 }
 populateUpdatedDetails();
 
-
 const hamburger = document.getElementById("hamburger");
 const links = document.getElementsByClassName("links")[0];
 
@@ -124,10 +123,9 @@ hamburger.addEventListener("click", function () {
   // const navLinks3 = document.getElementsByClassName("navigationLinks3")[0];
   if (links.style.display === "none" || links.style.display === "") {
     links.style.display = "grid";
-    // navLinks3.style.display = "none"; 
+    // navLinks3.style.display = "none";
   } else {
     links.style.display = "none";
-    // navLinks3.style.display = "flex"; 
+    // navLinks3.style.display = "flex";
   }
 });
-

@@ -54,7 +54,7 @@ async function forgotPassword() {
     const data = { email, password };
 
     const response = await fetch(
-      `http://localhost:3000/auth/forgotpassword/${user_id}`,
+      `https://valence-j2y3.onrender.com/auth/forgotpassword/${user_id}`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },

@@ -73,7 +73,7 @@ async function loginUsers() {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/auth/login`,
+      `https://valence-j2y3.onrender.com/auth/login`,
       {
         method: "POST",
         headers: {

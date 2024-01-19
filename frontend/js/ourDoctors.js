@@ -16,7 +16,7 @@ async function searchDoctors() {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/doctor/getdoctor/${searchInput}`
+      `https://valence-j2y3.onrender.com/doctor/getdoctor/${searchInput}`
     );
 
     // console.log(response);
@@ -51,7 +51,7 @@ async function searchDoctors() {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/doctor/getsingledoctor/${searchInput}`
+      `https://valence-j2y3.onrender.com/doctor/getsingledoctor/${searchInput}`
     );
 
     // console.log(response);
@@ -88,7 +88,7 @@ async function searchDoctors() {
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchDoctors() {
     try {
-      const response = await fetch(`http://localhost:3000/doctor/`);
+      const response = await fetch(`https://valence-j2y3.onrender.com/doctor/`);
 
       if (response.ok) {
         const data = await response.json();
@@ -204,7 +204,7 @@ async function bookDoctor(doctor_id) {
     alert(doctorData);
     try {
       const response = await fetch(
-        `http://localhost:3000/doctor/bookdoctor/`,
+        `https://valence-j2y3.onrender.com/doctor/bookdoctor/`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -241,7 +241,7 @@ async function postUserSymptoms() {
     };
 
     const response = await fetch(
-      `http://localhost:3000/user/patientsymptoms`,
+      `https://valence-j2y3.onrender.com/user/patientsymptoms`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

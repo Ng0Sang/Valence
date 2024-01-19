@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchKits() {
     try {
-      const response = await fetch(`http://localhost:3000/kit/`);
+      const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
 
       if (response.ok) {
         const data = await response.json();
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function fetchDoctors() {
     try {
-      const response = await fetch(`http://localhost:3000/doctor/`);
+      const response = await fetch(`https://valence-j2y3.onrender.com/doctor/`);
 
       if (response.ok) {
         const data = await response.json();

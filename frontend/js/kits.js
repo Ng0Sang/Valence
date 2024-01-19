@@ -18,7 +18,7 @@ async function searchKit() {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/kit/getsinglekit/${searchInput}`
+      `https://valence-j2y3.onrender.com/kit/getsinglekit/${searchInput}`
     );
 
     if (response.ok) {
@@ -54,7 +54,7 @@ async function searchKit() {
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchKits() {
     try {
-      const response = await fetch(`http://localhost:3000/kit/`);
+      const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
 
       if (response.ok) {
         const data = await response.json();
@@ -172,7 +172,7 @@ async function addToFavourites(kit_id) {
     // alert("kit Id", kit_id)
     try {
       const response = await fetch(
-        `http://localhost:3000/kit/addfavourite/`,
+        `https://valence-j2y3.onrender.com/kit/addfavourite/`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -311,7 +311,7 @@ if (userId) {
 // //     // const token = sessionStorage.getItem("token");
 // //     // console.log("token", token);
 // //     const response = await fetch(
-// //       `http://localhost:3000/user/getsinglepatient/${user_id}`
+// //       `https://valence-j2y3.onrender.com/user/getsinglepatient/${user_id}`
 // //     );
 // //     if (token) {
 // //       const footer = document.querySelector(".footerSection");
@@ -374,7 +374,7 @@ hamburger.addEventListener("click", function () {
 
 // async function displayDetails() {
 //   // const
-//   const kitDetails = await fetch(`http://localhost:3000/getsinglekit/${kit_id}`)
+//   const kitDetails = await fetch(`https://valence-j2y3.onrender.com/getsinglekit/${kit_id}`)
 // }
 
 //   const modalContent = document.getElementsByClassName("modal-text");
