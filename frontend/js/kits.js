@@ -29,7 +29,6 @@ async function searchKit() {
           searchResults.style.display = "block";
           searchResults.innerHTML = "No result found for your search.";
         } else {
-          // data.((kit) => {
           searchResults.style.display = "block";
           searchResults.innerHTML += `
               <img src="${data.image_url}"><br>
@@ -37,7 +36,6 @@ async function searchKit() {
               <strong>Price: </strong> ${data.price} <br>
               <strong>Description: </strong>${data.description} <br>
             `;
-          // });
         }
       } else {
         console.error("Invalid data structure received from the server.");
@@ -50,14 +48,12 @@ async function searchKit() {
   }
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
 async function fetchKits() {
   try {
     const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
 
       const kitContainer = document.getElementById("kitts");
 
@@ -83,8 +79,6 @@ async function fetchKits() {
                 </div>
                 `;
 
-            // console.log(kitHTML);
-            // console.log(kitContainer);
             kitContainer.insertAdjacentHTML("beforeend", kitHTML);
 
             const kitt = document.querySelectorAll(".kitts");
@@ -106,19 +100,14 @@ async function fetchKits() {
   }
 }
 
-// });
 fetchKits();
 
 function seeKitDetails(kit) {
-  // const doctor_id = sessionStorage.getItem("doctor_id");
   if (userId) {
     const modalcontainer = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
     const closeButtons = document.querySelectorAll(".closebutton");
     const modalText = document.querySelector(".modal_text");
-    // const kit_id = `${kit.kit_id}`;
-    // sessionStorage.setItem("kit_id", kit_id);
-    // console.log("kit_id", kit_id);
     modalText.innerHTML = `
     <div class="modal_text">
     <img src="${kit.image_url}"  class = "image" alt= "Hello Dear" />
@@ -166,9 +155,6 @@ async function addToFavourites(kit_id) {
   } else if (user_id) {
     const favouriteData = { user_id, kit_id };
     console.log(favouriteData);
-    // alert(favouriteData)
-    // alert("user Id", user_id)
-    // alert("kit Id", kit_id)
     try {
       const response = await fetch(
         `https://valence-j2y3.onrender.com/kit/addfavourite/`,
@@ -189,31 +175,6 @@ async function addToFavourites(kit_id) {
     }
   }
 }
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const userId = sessionStorage.getItem('user_id');
-
-//   if (userId) {
-//     const loginButton = document.querySelector('.button1');
-//     const signUpButton = document.querySelector('.button2');
-
-//     if (loginButton) {
-//       loginButton.parentNode.remove();
-//     }
-//     if (signUpButton) {
-//       signUpButton.parentNode.remove();
-//     }
-
-//     const myProfileButton = document.createElement('a');
-//     myProfileButton.setAttribute('href', '#');
-//     myProfileButton.innerHTML = '<button>My Profile</button>';
-
-//     const navigationLinks = document.querySelector('.navigationLinks3');
-//     if (navigationLinks) {
-//       navigationLinks.appendChild(myProfileButton);
-//     }
-//   }
-// });
 
 const userId = sessionStorage.getItem("user_id");
 const role = sessionStorage.getItem("role");
@@ -237,7 +198,6 @@ if (userId) {
   logOut.textContent = "Log Out";
   const icon = document.createElement("img");
   icon.src = "../images/cartBGC2.png";
-  // myProfileButton.appendChild(icon);
   myCart.appendChild(icon);
 
   navigationLinks3.appendChild(myCart);
@@ -304,27 +264,6 @@ if (userId) {
   });
 }
 
-//  async function checkLoggedUser () {
-// //   try {
-// //     const user_id = sessionStorage.getItem("user_id");
-// //     // const token = sessionStorage.getItem("token");
-// //     // console.log("token", token);
-// //     const response = await fetch(
-// //       `https://valence-j2y3.onrender.com/user/getsinglepatient/${user_id}`
-// //     );
-// //     if (token) {
-// //       const footer = document.querySelector(".footerSection");
-// //       footer.style.display = "hidden";
-// //       alert("You are not authorised to view kits");
-// //     }
-// //     const result = await response.json();
-
-// //     console.log(result);
-// //     if (user_id.length === 0) {
-// //       alert("You have to log in exist");
-// //     }
-// //   } catch (error) {}
-// // }
 
 function seeDetails() {
   const modalButton = document.querySelectorAll("#seedetails");
@@ -361,46 +300,10 @@ const hamburger = document.getElementById("hamburger");
 const links = document.getElementsByClassName("links")[0];
 
 hamburger.addEventListener("click", function () {
-  // const navLinks3 = document.getElementsByClassName("navigationLinks3")[0];
   if (links.style.display === "none" || links.style.display === "") {
     links.style.display = "grid";
-    // navLinks3.style.display = "none";
   } else {
     links.style.display = "none";
-    // navLinks3.style.display = "flex";
   }
 });
 
-// async function displayDetails() {
-//   // const
-//   const kitDetails = await fetch(`https://valence-j2y3.onrender.com/getsinglekit/${kit_id}`)
-// }
-
-//   const modalContent = document.getElementsByClassName("modal-text");
-//   modalContent.innerHTML = `<div class="frameKit"  id="seedetails" style="padding:10px; background-color: rgb(160, 205, 247); border: 1px solid grey; display: grid; grid-template-columns: auto auto auto; border-radius: 20px; margin-left: 5%; width: 90%;" onclick="seeDetails()">
-//   <div class="kits" style= "width: 20vw; height: auto;">
-//     <div><img src="${kit.image_url}" style= "width: 25vw; height: 40vh; margin-top: 6%; margin-left: 6%; border-radius: 20px;"/></div>
-//     <div style ="background-color:rgb(160, 205, 247); width: 27vw;  border-radius: 10px;">
-//     <div class="kitTag" style= "display: flex; padding:20px; margin-top: 4%; width: 30vw;">
-//       <h1 style = "color: black; font-size: 18px; width: 50%;">${kit.name}</h1>
-//       <p class="amount" style ="font-weight:700; margin-left:27%;">${kit.price}</p>
-//     </div>
-//       <p class="description" style= "color:white; margin-left: 4%;">${kit.description}</p>
-//       <div class="price">
-//         <a ><button style="
-//         font-weight: bold;
-//         color: white;
-//         font-size: 15px;
-//         border: hidden;
-//         border-radius: 10px;
-//         width: 6vw;
-//         height: 6vh;
-//         margin-left: 4%;
-//         margin-top: 3%;
-//         margin-bottom: 2%;
-//         background-color:black;  id="seedetails" onclick="seeDetails()">See Details</button></a>
-//       </div>
-//     </div>
-//   </div>
-// </div>`
-// document.body.style.overflow = "hidden";
