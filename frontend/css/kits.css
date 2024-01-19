@@ -1,0 +1,1081 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aliceblue;
+  background-size: inherit;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  align-items: center;
+  /* font-weight: bold; */
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+  font-family: monospace;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-size: 20px;
+  font-family: "Dancing Script";
+  font-weight: bold;
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: aliceblue;
+  color: black;
+  height: 8vh;
+  border: none;
+  outline: none;
+  border: 1px solid #5340ff;
+  z-index: 1000;
+}
+.hamburgerMenuBar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+}
+.links {
+  display: none;
+}
+.dropdown {
+  width: 8.7vw;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  width: 15vw;
+  height: fit-content;
+  border-radius: 10px;
+  border-style: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdown:hover .dropdown-menu {
+  padding: 20px;
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdown:hover .dropdown-menu a {
+  background: none;
+  color: black;
+  font-family: "Neuton";
+  font-size: 15px;
+}
+.dropdownorg {
+  margin-left: 1%;
+  width: 8.7vw;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu-org {
+  width: 10vw;
+  height: fit-content;
+  border: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu-org img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdownorg:hover .dropdown-menu-org {
+  /* padding: 20px; */
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdownorg:hover .dropdown-menu-org a {
+  background: none;
+  color: black;
+  font-size: 30px;
+  width: 40vw;
+}
+#searchResults {
+  border-radius: 10px;
+  /* border: 1px solid #301af1; */
+  display: none;
+  margin-top: 10%;
+  margin-left: 2%;
+  font-family: "Nueton";
+  width: 35vw;
+  padding: 20px;
+  font-size: 30px;
+  text-align: left;
+  border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0.725); */
+  color: black;
+}
+#closebutton {
+  cursor: pointer;
+  font-size: 28px;
+}
+.modal {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100%;
+  backdrop-filter: blur(8px);
+}
+
+input {
+  margin-top: 10%;
+  width: 10vw;
+  height: 3vh;
+  font-family: "Neuton";
+  border: none;
+  border: 1px solid grey;
+  background-color: aliceblue;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 20px;
+}
+input::placeholder {
+  font-size: 13px;
+  text-align: left;
+  font-family: "Neuton";
+}
+.navigationLinks2 {
+  width: 63%;
+  margin-left: 2%;
+  /* border: 1px solid red; */
+}
+.navigationLinks2 a button {
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: none;
+  font-weight: bold;
+  width: max-content;
+  font-family: "Neuton";
+  height: 6vh;
+  font-size: 13px;
+  color: black;
+}
+.navigationLinks2 a img {
+  width: 2vw;
+  height: auto;
+}
+.navigationLinks2 a button:hover {
+  background-color: skyblue;
+}
+.navigationLinks3 {
+  gap: 7px;
+  display: flex;
+}
+.navigationLinks3 button {
+  border: none;
+  font-size: 13px;
+  font-family: "Neuton";
+  background: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  height: 6vh;
+  width: 7vw;
+}
+.navigationLinks3 button:hover {
+  background-color: rgba(0, 0, 128, 0.868);
+  border-radius: 15px;
+  color: white;
+}
+.navigationLinks3 .button1 {
+  background-color: white;
+  margin-top: 2%;
+  font-size: 15px;
+}
+.navigationLinks3 .button2 {
+  margin-top: 1%;
+  color: white;
+  background-color: navy;
+}
+#searchResults img {
+  width: 20vw;
+  height: auto;
+  border-radius: 20px;
+}
+.navigationLinks3 .button3 {
+  margin-top: 5%;
+  color: #5340ff;
+  border-radius: 10px;
+  background-color: white;
+}
+.navigationLinks3 .button3:hover {
+  color: white;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 128, 0.868);
+}
+.button3 img {
+  width: 1.5vw;
+  height: auto;
+}
+#favouriteKit img {
+  width: 2vw;
+  height: auto;
+}
+h2 {
+  margin-top: 10%;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Dancing Script";
+  font-weight: Bold;
+  color: black;
+}
+.modal {
+  background-color: white;
+  padding: 20px;
+  color: black;
+  border-radius: 10px;
+  width: 53%;
+  border: 2px solid navy;
+  height: fit-content;
+  position: fixed;
+  left: 23%;
+  top: 30%;
+}
+.modal_header {
+  text-align: right;
+  border-bottom: 1px solid #ccc;
+}
+.closebutton {
+  cursor: pointer;
+  font-size: 70px;
+}
+.modal_text {
+  width: 100%;
+  /* margin-bottom: 5%; */
+  display: flex;
+  font-family: Nueton;
+}
+.modal_text .image {
+  height: auto;
+  width: 25vw;
+  border: 1px solid grey;
+  border-radius: 0px;
+}
+.doctorDetails {
+  width: 100%;
+  margin-top: 4%;
+}
+.doctorDetails h1 {
+  margin-top: 2%;
+  font-size: 20px;
+  width: 100%;
+  margin-left: 4%;
+  font-weight: 200;
+}
+.doctorDetails h1 strong {
+  font-weight: 500;
+}
+.bookDoctor a button {
+  font-weight: bold;
+  color: navy;
+  font-size: 13px;
+  border: hidden;
+  border-radius: 15px;
+  width: 8vw;
+  height: 7vh;
+  margin-left: 4%;
+  margin-top: 10%;
+  background-color: aliceblue;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+}
+.kitts {
+  background-color: aliceblue;
+  margin-left: 8%;
+  width: 85%;
+  padding: 20px;
+  height: 100%;
+  margin-top: 5%;
+  border-radius: 10px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+  /* display: none; */
+  /* border: 1px solid red; */
+}
+.frameKit {
+  padding: 10px;
+  background-color: aliceblue;
+  border: 1px solid grey;
+  margin-left: 1%;
+  width: 25vw;
+  height: 60vh;
+  overflow: hidden;
+  transition: 7s;
+}
+.kits {
+  width: 100%;
+  height: auto;
+}
+.kits .kitImage {
+  width: 95%;
+  height: 40vh;
+  margin-top: 6%;
+  margin-left: 3%;
+  /* border: 1px solid red; */
+  /* border-radius: 20px; */
+}
+.kitImage img {
+  width: 22vw;
+  height: 35vh;
+}
+.kits .kitContent {
+  background-color: aliceblue;
+  width: 100%;
+  border-radius: 10px;
+}
+.kitTag {
+  display: flex;
+  padding: 20px;
+  margin-top: 1%;
+  width: 30vw;
+}
+.kitTag .kitName {
+  color: black;
+  font-size: 23px;
+  font-family: "Dancing Script";
+  width: 50%;
+}
+.kitTag .amount {
+  font-weight: 700;
+  margin-left: 15%;
+  font-family: "Dancing Script";
+  font-size: 15px;
+}
+.description {
+  padding: 2vh;
+  height: auto;
+  padding-bottom: 200px;
+}
+.frameKit:hover .description {
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: navy;
+  font-weight: 200;
+  background-color: rgb(224, 240, 254);
+  transform: translateY(-15vh);
+  transition: 1s;
+}
+.kitImage:hover img {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.footerSection {
+  margin-top: 5%;
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  background-color: black;
+}
+.footerLinks {
+  display: flex;
+}
+.getStarted {
+  /* border: 1px solid red; */
+  padding: 20px;
+  width: 60%;
+}
+.getStartedp1 {
+  margin-top: 5%;
+  font-family: "Dancing Script";
+  margin-left: 50%;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+.getStartedp2 {
+  font-size: 20px;
+  color: grey;
+  font-family: "Neuton";
+  margin-left: 50%;
+}
+.getStartedButton {
+  padding: 20px;
+  width: 50%;
+}
+.getStartedButton a button {
+  border: none;
+  font-size: 15px;
+  border-radius: 6px;
+  font-family: "Neuton";
+  margin-left: 2%;
+  width: 10vw;
+  height: 9vh;
+  margin-top: 8%;
+  color: white;
+  background-color: #301af1;
+  text-decoration: none;
+}
+.unordered {
+  margin-top: 5%;
+  display: flex;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 1px;
+}
+ul {
+  font-size: 8px;
+  padding-left: 70px;
+  margin-top: 1%;
+  list-style: none;
+  display: block;
+  float: left;
+}
+ul > a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  font-size: 15px;
+}
+h6 {
+  font-weight: 700;
+  font-size: 15px;
+}
+footer .valenceLogo {
+  margin-top: 5%;
+  margin-left: 30%;
+}
+.valenceLogo a {
+  text-decoration: none;
+  margin-left: 10%;
+  font-family: "Dancing Script";
+  color: black;
+  font-size: 20px;
+}
+.valenceLogo img {
+  margin-left: 30px;
+  width: 5vw;
+  height: auto;
+}
+.copywright ul {
+  width: 100%;
+}
+.copywright li {
+  color: grey;
+  margin-left: 40%;
+  margin-bottom: 3%;
+  font-size: 15px;
+}
+footer {
+  margin-top: 1%;
+}
+@media only screen and (max-width: 399px) {
+  .navigation {
+    /* display: none; */
+    height: fit-content;
+  }
+  .navigation a {
+    font-size: 10px;
+  }
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 18px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 15%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .navigationLinks3 .button3 {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    overflow-y: visible;
+  }
+  .links {
+    background-color: lightblue;
+    width: 20vw;
+    height: 60vh;
+  }
+  .links a {
+    margin-left: 15%;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .links .loggedInLinks {
+    font-weight: bold;
+    color: navy;
+  }
+  #searchResults {
+    margin-top: 20%;
+    font-size: 20px;
+    width: 90%;
+  }
+  Input {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid black;
+  }
+  .kitts {
+    margin-top: 5%;
+    width: 100%;
+    grid-template-columns: auto;
+    gap: 25px;
+  }
+  .modal {
+    background-color: navy;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    width: 53%;
+    height: fit-content;
+    position: fixed;
+    left: 23%;
+    top: 25%;
+  }
+  .modal_header {
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+  }
+  .closebutton {
+    cursor: pointer;
+    font-size: 70px;
+  }
+  .modal_text {
+    width: 100%;
+    /* margin-bottom: 5%; */
+    display: flex;
+    font-family: Nueton;
+  }
+  .modal_text .image {
+    height: auto;
+    width: 25vw;
+    border-radius: 0px;
+  }
+  h2 {
+    margin-top: 35%;
+    font-size: 30px;
+  }
+  #favouriteKit img {
+    height: auto;
+    width: 7vw;
+  }
+  .frameKit {
+    margin-right: 5%;
+    height: 68vh;
+    width: 90%;
+  }
+  .kits {
+    width: 100%;
+  }
+  .kitContent {
+    width: 100%;
+    height: 100%;
+  }
+  .kitTag {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+  }
+  .kitTag .amount {
+    margin-left: 40%;
+  }
+  .kitImage img {
+    width: 67vw;
+    height: 40vh;
+  }
+  .description {
+    font-size: 20px;
+    margin-left: 2%;
+  }
+  .frameKit:hover .description {
+    transform: translateY(-30vh);
+  }
+  .footerSection {
+    width: 100%;
+  }
+  .getStartedp1 {
+    margin-left: 20%;
+    font-size: 25px;
+  }
+  .getStartedp2 {
+    font-size: 17px;
+    margin-left: 20%;
+  }
+  .getStartedButton a button {
+    font-size: 17px;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 30%;
+  }
+  .unordered {
+    width: 50%;
+    display: block;
+    margin-left: 3%;
+  }
+
+  footer .valenceLogo a {
+    font-size: 20px;
+    margin-top: 10%;
+    text-decoration: none;
+  }
+  .valenceLogo img {
+    width: 10vw;
+    height: auto;
+  }
+  .copywright ul {
+    width: 100%;
+  }
+  .copywright li {
+    margin-left: 1%;
+    margin-bottom: 3%;
+    font-size: 15px;
+    margin-top: 10%;
+  }
+}
+
+/* #closebutton {
+  cursor: pointer;
+  font-size: 28px;
+}
+.modal {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100%;
+  backdrop-filter: blur(8px);
+} */
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .navigation {
+    /* display: none; */
+    height: fit-content;
+  }
+  .navigation a {
+    font-size: 10px;
+  }
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 18px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 15%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .navigationLinks3 .button3 {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    overflow-y: visible;
+  }
+  .links {
+    background-color: lightblue;
+    width: 100vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .links .loggedInLinks {
+    font-weight: bold;
+    color: navy;
+  }
+  #searchResults {
+    margin-top: 20%;
+    font-size: 20px;
+    width: 90%;
+  }
+  Input {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid black;
+  }
+  .kitts {
+    margin-top: 5%;
+    width: 100%;
+    grid-template-columns: auto;
+    gap: 25px;
+  }
+  h2 {
+    margin-top: 25%;
+    font-size: 30px;
+  }
+  #favouriteKit img {
+    height: auto;
+    width: 7vw;
+  }
+  .frameKit {
+    margin-right: 5%;
+    height: 72vh;
+    width: 90%;
+  }
+  .kits {
+    width: 100%;
+  }
+  .kitContent {
+    width: 100%;
+    height: 100%;
+  }
+  .kitTag {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+  }
+  .kitTag .amount {
+    margin-left: 50%;
+  }
+  .kitImage img {
+    width: 74vw;
+    height: 40vh;
+  }
+  .description {
+    font-size: 20px;
+    margin-left: 2%;
+  }
+  .frameKit:hover .description {
+    transform: translateY(-30vh);
+  }
+  .footerSection {
+    width: 100%;
+  }
+  .getStartedp1 {
+    margin-left: 20%;
+    font-size: 25px;
+  }
+  .getStartedp2 {
+    font-size: 17px;
+    margin-left: 20%;
+  }
+  .getStartedButton a button {
+    font-size: 17px;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 30%;
+  }
+  .unordered {
+    width: 50%;
+    display: block;
+    margin-left: 3%;
+  }
+
+  footer .valenceLogo a {
+    font-size: 20px;
+    margin-top: 10%;
+    text-decoration: none;
+  }
+  .valenceLogo img {
+    width: 10vw;
+    height: auto;
+  }
+  .copywright ul {
+    width: 100%;
+  }
+  .copywright li {
+    margin-left: 1%;
+    margin-bottom: 3%;
+    font-size: 15px;
+    margin-top: 10%;
+  }
+}
+
+/* #closebutton {
+  cursor: pointer;
+  font-size: 28px;
+}
+.modal {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100%;
+  backdrop-filter: blur(8px);
+} */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .navigation {
+    /* display: none; */
+    height: fit-content;
+  }
+  .navigation a {
+    font-size: 10px;
+  }
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 18px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 15%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .navigationLinks3 .button3 {
+    display: none;
+  }
+  .hamburger {
+    margin-right: 5%;
+    display: block;
+    overflow-y: visible;
+  }
+  .links {
+    background-color: lightblue;
+    width: 40vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .links .loggedInLinks {
+    font-weight: bold;
+    color: navy;
+  }
+  #searchResults {
+    margin-top: 20%;
+    font-size: 20px;
+    width: 90%;
+  }
+  Input {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid black;
+  }
+  .kitts {
+    margin-top: 5%;
+    width: 100%;
+    grid-template-columns: auto;
+    gap: 25px;
+  }
+  h2 {
+    margin-top: 25%;
+    font-size: 30px;
+  }
+  #favouriteKit img {
+    height: auto;
+    width: 7vw;
+  }
+  .frameKit {
+    margin-left: 10%;
+    height: 75vh;
+    width: 60vw;
+  }
+  .kits {
+    width: 100%;
+  }
+  .kitContent {
+    width: 100%;
+    height: 100%;
+  }
+  .kitTag {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+  }
+  .kitTag .amount {
+    margin-left: 50%;
+  }
+  .kitImage img {
+    width: 54vw;
+    height: 40vh;
+  }
+  .description {
+    font-size: 20px;
+    margin-left: 2%;
+  }
+  .frameKit:hover .description {
+    transform: translateY(-30vh);
+  }
+  .footerSection {
+    width: 100%;
+  }
+  .getStartedp1 {
+    margin-left: 20%;
+    font-size: 25px;
+  }
+  .getStartedp2 {
+    font-size: 17px;
+    margin-left: 20%;
+  }
+  .getStartedButton a button {
+    font-size: 17px;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 30%;
+  }
+  .unordered {
+    width: 50%;
+    display: block;
+    margin-left: 3%;
+  }
+
+  footer .valenceLogo a {
+    font-size: 20px;
+    margin-top: 10%;
+    text-decoration: none;
+  }
+  .valenceLogo img {
+    width: 10vw;
+    height: auto;
+  }
+  .copywright ul {
+    width: 100%;
+  }
+  .copywright li {
+    margin-left: 1%;
+    margin-bottom: 3%;
+    font-size: 15px;
+    margin-top: 10%;
+  }
+}
+
+/* #closebutton {
+  cursor: pointer;
+  font-size: 28px;
+}
+.modal {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100%;
+  backdrop-filter: blur(8px);
+} */

@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nueton";
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  background-size: inherit;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+  font-family: monospace;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Dancing Script";
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+label {
+  padding: 20px;
+  font-size: 18px;
+  color: black;
+  margin-top: 4%;
+  margin-left:20%;
+}
+input {
+  margin-left: 20%;
+  padding: 20px;
+  width: 30vw;
+  height: auto;
+}
+span {
+  color: red;
+}
+.doctorDetails {
+  width: 60vw;
+  /* margin-left: %; */
+  background-color: white;
+  border-radius: 0px;
+  border: 1px solid grey;
+}
+.response {
+  background-color: white;
+  margin-top: 13%;
+  width: 40%;
+  height: 100%;
+  border-radius: 20px;
+  margin-left: 28%;
+  margin-bottom: 7%;
+}
+.response a button {
+  background-color: rgb(4, 4, 85);
+  width: 7vw;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: "Nueton";
+  font-size: 20px;
+  margin-left: 3%;
+  margin-bottom: 3%;
+  margin-top: 5%;
+  height: 7vh;
+}
+.response p {
+  color: black;
+  font-size: 25px;
+  font-family: "Nueton";
+  text-align: center;
+  padding: 20px;
+}
+.modal {
+  background-color: navy;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  width: 53%;
+  height: fit-content;
+  position: fixed;
+  left: 23%;
+  top: 15%;
+}
+/* .closebutton {
+  position: fixed;
+  cursor: pointer;
+  font-size: 40px;
+} */
+.doctorCertificates p {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Neuton";
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #5340ff;
+}
+.modal_text {
+  width: 100%;
+  display: flex;
+  font-family: Nueton;
+}
+.doctorCertificates button {
+  font-weight: bold;
+  color: white;
+  font-size: 13px;
+  border: hidden;
+  border-radius: 15px;
+  width: 8vw;
+  height: 7vh;
+  margin-left: 20%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  background-color: #5340ff;
+}
+.hidden {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+}
+@media screen and (max-width: 399px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 15px;
+  }
+  .navigationLinks1 img {
+    width: 8vw;
+    height: auto;
+    margin-left: 30%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  label{
+    margin-left: 20px;
+    font-size: 10px;
+  }
+  input{
+    margin-left: 35px;
+    height: 2vh;
+    width: 45vw;
+  }
+  input::placeholder{
+    font-size: 10px;
+  }
+  .modal{
+    width: 80vw;
+    left: 10%;
+    top:17%;
+  }
+  .doctorDetails{
+    width: 80vw;
+  }
+  .doctorCertificates button{
+    width: 30vw;
+    border-radius: 0px;
+  }
+  .doctorCertificates p{
+    margin-top: 5%;
+    font-size: 20px;
+  }
+  .response p{
+    font-size: 13px;
+  }
+  .response {
+    margin-left: 8%;
+    width: 84%;
+    margin-top: 30%;
+  }
+  .response a button {
+    font-size: 15px;
+    width: 20vw;
+    height: 8vh;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .response {
+    margin-left: 8%;
+    width: 84%;
+    margin-top: 30%;
+  }
+  label{
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  input{
+    margin-left: 35px;
+    height: 2vh;
+    width: 45vw;
+  }
+  input::placeholder{
+    font-size: 10px;
+  }
+  .modal{
+    width: 70vw;
+    left: 15%;
+    top:17%;
+  }
+  .doctorCertificates button{
+    width: 30vw;
+    border-radius: 0px;
+  }
+  .doctorCertificates p{
+    margin-top: 5%;
+    font-size: 25px;
+  }
+  .response p{
+    font-size: 15px;
+  }
+  .response a button {
+    width: 20vw;
+    font-size: 15px;
+    height: 8vh;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .response {
+    margin-left: 8%;
+    width: 84%;
+    margin-top: 30%;
+  }
+  .response p{
+    font-size: 20px;
+  }
+  label{
+    font-size: 13px;
+  }
+  input{
+    height: 4vh;
+  }
+  .modal{
+    top:20%;
+  }
+  .doctorCertificates button{
+    width: 30vw;
+    border-radius: 0px;
+  }
+  .doctorCertificates p{
+    margin-top: 5%;
+    font-size: 20px;
+  }
+  .response a button {
+    width: 20vw;
+    font-size: 18px;
+    height: 8vh;
+  }
+}

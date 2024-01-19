@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Neuton";
+  background: url(../images/medical-equipment-with-stethoscope.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  margin-top: 1%;
+  font-size: 18px;
+  font-family: monospace;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-family: "Dancing Script";
+  font-size: 20px;
+  font-weight: bold;
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.navigationLinks2 {
+  width: 90vw;
+  margin-left: 10%;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: aliceblue;
+  color: black;
+  height: 8vh;
+  border: none;
+  outline: none;
+  border: 1px solid #5340ff;
+  z-index: 1000;
+}
+.hamburgerMenuBar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+}
+.links {
+  display: none;
+}
+.dropdown {
+  width: 8.7vw;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  width: 15vw;
+  height: fit-content;
+  border-radius: 10px;
+  border-style: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdown:hover .dropdown-menu {
+  padding: 20px;
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdown:hover .dropdown-menu a {
+  background: none;
+  font-family: "Neuton";
+  color: black;
+  font-size: 15px;
+  width: 30vw;
+}
+.dropdownorg {
+  width: 8.7vw;
+  margin-top: 1%;
+  margin-left: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu-org {
+  border-radius: 10px;
+  width: 10vw;
+  height: fit-content;
+  border: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu-org img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdownorg:hover .dropdown-menu-org {
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdownorg:hover .dropdown-menu-org a {
+  background: none;
+  color: black;
+  font-weight: 200;
+  font-size: 25px;
+}
+.navigationLinks2 a button {
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: none;
+  font-family: "Neuton";
+  font-weight: bold;
+  width: max-content;
+  margin-top: 1%;
+  height: 6vh;
+  font-size: 13px;
+  color: black;
+}
+.navigationLinks2 a img {
+  width: 2vw;
+  height: auto;
+}
+.navigationLinks2 a button:hover {
+  background-color: skyblue;
+}
+.navigationLinks3 {
+  margin-right: 3%;
+  /* border: 1px solid red; */
+}
+.navigationLinks3 button {
+  margin-top: 3%;
+  transition: 1s;
+  border: none;
+  font-size: 15px;
+  font-family: "Neuton";
+  background: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  height: 6vh;
+  width: 7vw;
+}
+.navigationLinks3 button:hover {
+  border-radius: 20px;
+  transform: scale(1, 1);
+  background-color: black;
+}
+.navigationLinks3 .button2 {
+  color: white;
+  background-color: rgb(4, 4, 85);
+}
+
+.formAnotherDiv {
+  margin-top: 12%;
+  margin-left: 22%;
+  background-color: aliceblue;
+  width: 55vw;
+  height: 70vh;
+  display: flex;
+  /* border: 1px solid red; */
+}
+span {
+  color: red;
+}
+form {
+  margin-top: 5%;
+  width: 20vw;
+  margin-left: 30%;
+  height: fit-content;
+  background-color: white;
+  border: none;
+  padding: 30px;
+  background-color: white;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+h1 {
+  text-align: center;
+  color: blue;
+  margin-top: 10%;
+  font-size: 20px;
+  font-family: "Dancing Script";
+  margin-bottom: 10%;
+}
+label {
+  font-weight: bold;
+  padding: 20px;
+  font-family: "Neuton";
+  font-size: 13px;
+  color: blue;
+}
+input {
+  margin-left: 5%;
+  font-size: 13px;
+  padding: 10px;
+  outline: 0;
+  font-family: "Neuton";
+  background: none;
+  color: black;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 15vw;
+}
+input::placeholder {
+  text-align: left;
+  font-size: 15px;
+  font-family: "Neuton";
+  color: grey;
+}
+button {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  border: hidden;
+  font-family: "Dancing Script";
+  border-radius: 20px;
+  width: 10vw;
+  height: 6vh;
+  margin-top: 4%;
+  margin-left: 25%;
+  background-color: rgba(69, 69, 253, 0.904);
+}
+.error {
+  font-size: 16px;
+  color: red;
+  margin-left: 5%;
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .navigationLinks1 a img {
+    width: 10vw;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .formAnotherDiv {
+    margin-top: 7%;
+    margin-right: 50%;
+    width: 70vw;
+  }
+  form {
+    background-color: aliceblue;
+    width: 100%;
+  }
+  input {
+    width: 50vw;
+  }
+  button {
+    width: 20vw;
+    height: 8vh;
+    /* border-radius: 5px; */
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .navigationLinks1 a img {
+    width: 10vw;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .formAnotherDiv {
+    margin-top: 15%;
+    margin-right: 50%;
+    width: 70vw;
+  }
+  form {
+    background-color: aliceblue;
+    width: 50%;
+    /* border: 1px solid red; */
+  }
+  input {
+    width: 30vw;
+  }
+  button {
+    width: 20vw;
+    height: 8vh;
+    /* border-radius: 5px; */
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .navigationLinks1 a img {
+    width: 10vw;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .formAnotherDiv {
+    margin-top: 7%;
+    margin-right: 50%;
+    width: 70vw;
+  }
+  form {
+    background-color: aliceblue;
+    width: 100%;
+  }
+  input {
+    font-size: 13px;
+    width: 50vw;
+  }
+  button {
+    width: 20vw;
+    height: 8vh;
+    /* border-radius: 5px; */
+}
+}

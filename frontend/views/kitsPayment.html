@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/payment.css" />
+  </head>
+  <body class="body">
+    <nav class="navigation">
+      <div class="navigationLinks1">
+        <a href="../index.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+      <div class="navigationLinks2">
+        <a href="../views/ourDoctors.html"><button><img src="../images/nurse_7024848.png" alt="">Our Doctors</button></a>
+        <a href="../views/kits.html"><button><img src="../images/equipment_5986725.png" alt="">Our Kits</button></a>
+        <a href="#"><button><img src="../images/link_4948833.png" alt="">Join the Community</button></a>
+        <a href="">
+          <div class="dropdown">
+            <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Personalized Care</button></a>
+            <div class="dropdown-menu">
+              <a href="/views/valenceHealthApp.html"><img src="../images/right-down_5712572.png">Diabetic Care</a>
+              <a href="/views/valenceHealthApp.html"><img src="../images/right-down_5712572.png">Hypertensive Care</a>
+              <a href="/views/valenceHealthApp.html"><img src="../images/right-down_5712572.png">Blood Pressure Care</a>
+              <a href="/views/valenceHealthApp.html"><img src="../images/right-down_5712572.png">HIV/AIDS Care</a>
+            </div>
+          </div>
+          <a href="">
+            <div class="dropdownorg">
+              <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Support</button></a>
+              <div class="dropdown-menu-org">
+                <a href="../views/contactUs.html"><button><img src="../images/right-down_5712572.png" alt="">Contact Us</button></a>
+                <a href="../views/aboutUs.html"><button><img src="../images/right-down_5712572.png" alt="">About Us</button></a>
+              </div>
+            </div>
+          </a>
+      </div>
+      <div class="navigationLinks3">
+        <a href="../index.html"><button class="button2">Log Out</button></a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="links">
+          <a href="../views/signUp.html">Sign Up</a>
+          <a href="../views/ourDoctors.html">Our Doctors</a>
+          <a href="../views/kits.html">Our Kits</a>
+          <a href="#">Join the Community</a>
+          <a href="/views/valenceHealthApp.html">Personalized Care</a>           
+          <a href="../views/contactUs.html">Contact Us</a>
+          <a href="../views/aboutUs.html" class="lastLinka">About Us</a>
+        </div>
+    </div>
+    </nav>
+    <section class="formAnotherDiv">
+      <form id="myform">
+        <h1>Payment Details</h1>
+        <div class="email">
+          <label for="email">Email<span>*</span></label
+          ><br />
+          <input type="email" id="email" placeholder="user@gmail.com" />
+          <p class="error" id="emailError"></p>
+        </div>
+        <br />
+        <div class="email">
+          <label for="name">Name<span>*</span></label
+          ><br />
+          <input type="text" id="name" placeholder="name" />
+          <p class="error" id="emailError"></p>
+        </div>
+        <br />
+        <div class="email">
+          <label for="amount">Amount<span>*</span></label
+          ><br />
+          <input type="text" id="amount" placeholder="amount" />
+          <p class="error" id="emailError"></p>
+        </div>
+        <br />
+
+        <button type="submit">pay</button>
+      </form>
+    </section>
+
+</body>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const kitPrice = sessionStorage.getItem("kit_price")
+    const paymentForm = document.getElementById("myform");
+paymentForm.addEventListener("submit", payWithPaystack, false);
+
+document.getElementById("email").value = sessionStorage.getItem("email");
+document.getElementById("amount").value = kitPrice;
+document.getElementById("name").value = sessionStorage.getItem("name");
+
+function payWithPaystack(e) {
+  e.preventDefault();
+
+  let handler = PaystackPop.setup({
+    key: "pk_test_74b59d726057c5cafed8f3fdf4b0aee62b281ab7",
+    email: document.getElementById("email").value,
+    amount: document.getElementById("amount").value * 100,
+    ref: "" + Math.floor(Math.random() * 1000000000 + 1),
+
+    onClose: function () {
+      alert("Bye 😢", name);
+    },
+    callback: function (response) {
+      let message = "Payment was Successful! Reference: " + response.reference;
+      alert(message);
+    },
+  });
+
+  handler.openIframe();
+}
+  });
+
+</script>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigationLinks1">
+        <a href="./index.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+      <div class="navigationLinks2">
+        <a href="./views/ourDoctors.html"><button>Our Doctors</button></a>
+        <a href="./views/kits.html"><button>Our Kits</button></a>
+        <a href="./index.html"><button>Join the Community</button></a>
+        <!-- <div class="dropdown">
+          <a href="./index.html">Personalized Care</a>
+          <div class="dropdown-menu">
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />Diabetic Care</a
+            >
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />Hypertensive Care</a
+            >
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />Blood Pressure Care</a
+            >
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />HIV/AIDS Care</a
+            >
+          </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="navigationLinks3">
+        <!-- <a href="./views/login.html"><button class="button1">Log in</button></a> -->
+        <a href="./views/signUp.html"
+          ><button class="button2">Log Out</button></a
+        >
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+      </div>
+    </nav>
+    <!-- <h1>Hello Admin</h1> -->
+    <section class="admin">
+      <div class="dashboardLinks">
+        <!-- <a href="../"><button type="submit" class="dashBoard">Dashboard</button></a> -->
+        <a href="../"
+          ><button type="submit" class="addAdmin">Add Admin</button></a
+        >
+        <a href="../"
+          ><button type="submit" class="editAdmin">Edit Admin</button></a
+        >
+        <a href="#kitResult" id="viewDoctors" onclick="fetchDoctors()"
+          ><button type="submit" class="viewDoctors" id="viewDoctors">
+            View Doctors
+          </button></a
+        >
+        <a href="../"
+          ><button type="submit" class="viewUsers">View Users</button></a
+        >
+        <a href="#kitResult" id="viewKits" onclick="fetchKits()"
+          ><button type="submit" class="viewKits" id="viewKits">
+            View Kits
+          </button></a
+        >
+        <a href="../"
+          ><button type="submit" class="otherSetting">Settings</button></a
+        >
+      </div>
+      <div class="moreContent">
+        <div class="dashBoardDetails">
+          <a href=""
+            ><button class="availableDoctors" id="availableDoctors">
+              Available Doctors
+            </button></a
+          >
+          <a href=""
+            ><button class="totalBookings" id="totalBookings">
+              Total Bookings
+            </button></a
+          >
+          <a href=""
+            ><button class="allUsers" id="allUsers">All Users</button></a
+          >
+          <a href=""
+            ><button class="totalAmount" id="totalAmount">N 00.00</button></a
+          >
+        </div>
+        <div class="viewKit">
+          <div class="kitResult">
+            <p class="kitResults" id="kitResult"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="../js/admin.js"></script>
+  <footer>
+    <div class="footerSection">
+      <div class="getStarted">
+        <p class="getStartedp1">
+          Add, Edit, Delete and Post data for kits, Users and Doctors.
+        </p>
+      </div>
+      <div class="getStartedButton">
+        <a href="../views/ourDoctors.html"><button>Log Out</button></a>
+      </div>
+    </div>
+
+    <div class="footerLinks">
+      <div class="unordered">
+        <ul>
+          <h6>ACTIVITIES</h6>
+          <br />
+          <a href="">Met Doctors</a
+          ><br />
+          <a href="">Join Conversation</a
+          ><br />
+          <a href="">Kit</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>App</h6>
+          <br />
+          <a href="">About Us</a
+          ><br />
+          <a href="">Collections</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>SUPPORT</h6>
+          <br />
+          <a href="">Help Center</a
+          ><br />
+          <a href="">Contact Us</a
+          ><br />
+          <a href="">Email</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>INFORMATION</h6>
+          <br />
+          <a href="">Privacy Policy</a
+          ><br />
+          <a href="">Terms Of Use</a
+          ><br />
+        </ul>
+      </div>
+      <div class="valenceLogo">
+        <a href="../index.html">VALENCE</a>
+        <img src="../images/logo2.png" alt="" />
+      </div>
+    </div>
+    <div class="copywright">
+      <ul>
+        <li>@2023 VALENCE</li>
+      </ul>
+    </div>
+  </footer>
+</html>

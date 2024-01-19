@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body class="body">
+    <nav class="navigation">
+      <div class="navigationLinks1">
+        <a href="../index.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+      <div class="navigationLinks2">
+        <a href="../views/ourDoctors.html"><button><img src="../images/nurse_7024848.png" alt="">Our Doctors</button></a>
+        <a href="../views/kits.html"><button><img src="../images/equipment_5986725.png" alt="">Our Kits</button></a>
+        <a href="../views/joinCommunity.html"><button><img src="../images/link_4948833.png" alt="">Join the Community</button></a>
+        <a href="">
+          <div class="dropdown">
+            <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Personalized Care</button></a>
+            <div class="dropdown-menu">
+              <a href="../views//diabeticCare.html"><img src="../images/right-down_5712572.png">Diabetic Care</a>
+              <a href="../views//diabeticCare.html"><img src="../images/right-down_5712572.png">Hypertensive Care</a>
+              <a href="../views//diabeticCare.html"><img src="../images/right-down_5712572.png">Blood Pressure Care</a>
+              <a href="../views//diabeticCare.html"><img src="../images/right-down_5712572.png">HIV/AIDS Care</a>
+            </div>
+          </div>
+          <a href="">
+            <div class="dropdownorg">
+              <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Support</button></a>
+              <div class="dropdown-menu-org">
+                <a href="../views/contactUs.html"><button><img src="../images/right-down_5712572.png" alt="">Contact Us</button></a>
+                <a href="../views/aboutUs.html"><button><img src="../images/right-down_5712572.png" alt="">About Us</button></a>
+              </div>
+            </div>
+          </a>
+      </div>
+      <div class="navigationLinks3">
+        <a href="../views/signUp.html"><button class="button2">Sign Up</button></a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="links">
+          <a href="../views/signUp.html">Sign Up</a>
+          <a href="../views/ourDoctors.html">Our Doctors</a>
+          <a href="../views/kits.html">Our Kits</a>
+          <a href="../views/joinCommunity.html">Join the Community</a>
+          <a href="../views//diabeticCare.html">Personalized Care</a>           
+          <a href="../views/contactUs.html">Contact Us</a>
+          <a href="../views/aboutUs.html" class="lastLinka">About Us</a>
+        </div>
+    </div>
+    </nav>
+    <section class="formAnotherDiv">
+      <form id="myform">
+        <h1>Login In</h1>
+        <div class="email">
+          <label for="email">Email<span>*</span></label
+          ><br />
+          <input type="email" id="email" placeholder="user@gmail.com" />
+          <p class="error" id="emailError"></p>
+        </div>
+        <br /><br />
+        <div class="password">
+          <label for="password">Password<span>*</span></label
+            ><br />
+            <input type="password" id="password" placeholder="Input Password" />
+          <img src="../images/password_6041712.png" id="toggleButton" class="toggleButton" onclick="checkPassword()" alt="">
+          <p class="error" id="passwordError"></p>
+        </div>
+
+        <button type="submit">Log In</button>
+      </form>
+      <div class="anotherDiv">
+        <!-- <h1>Get to Us via:</h1>
+        <div class="logos">
+          <img src="../images/facebook_5968764.png" alt="">
+          <img src="../images/instagram_1409946.png" alt="">
+          <img src="../images/twitter_3955031.png" alt="">
+        </div> -->
+        <p class="dontHaveAccount">
+          Don't have an Account?<a href="./signUp.html">Sign Up</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

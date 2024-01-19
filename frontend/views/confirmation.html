@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors Confirmation</title>
+    <link rel="stylesheet" href="../css/confirmation.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigationLinks1">
+        <a href="../index.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+    </nav>
+    <section class="doctorCerts">
+        <div class="overlay hidden"></div>
+        <div class="modal hidden">
+          <!-- <span class="closebutton">&times;</span> -->
+          <div class="modal_text">
+            <div class="doctorDetails">
+              <form action="/doctor/verifyDoctor" method="post" enctype="multipart/form-data"class="doctorCertificates" id="verifyDoctor">
+                <p>Fill your details for Verification</p>
+                  <label for="specialty"
+                    >Name <span>*</span> <br />
+                    <input type="text" class="name" id="name" placeholder="Enter your name"
+                  /></label><br><br>
+                  <label for="specialty"
+                    >Specialty <span>*</span> <br />
+                    <input type="text" class="specialty" id="specialty" placeholder="Enter your specialty"
+                  /></label><br><br>
+                  <label for="licence"
+                    >Licence <span>*</span><br />
+                    <input type="file" class="licence" id="doctorImage" name="doctorImage" /></label
+                  ><br /><br>
+                  <label for="other_qualifications"
+                    >Link to Other Qualifications <span>*</span><br />
+                    <input
+                      type="text"
+                      class="other_qualifications"
+                      id="other_qualifications" placeholder="Enter a legit link to the drive of your other qualifications" /></label
+                  ><br /><br>
+                  <a href=""><button class="agree">Submit</button></a>
+              </form>
+            </div>
+          </div>
+          </div>
+    </section>
+
+    <section class="response">
+      <p>
+        Our main goal for this platform is to provide services to our patients
+        all over the country, To be verified to provide the services of a Doctor
+        on this platform, you need to sign the contract of providing total
+        devotion to your patients without restraint, without giving out wrong
+        recommendation and always being there for them when they need you.
+        <br />
+        <br />
+        Should after the verification of all your details, and we find any of it
+        to be false, you will be penalised wth a fine of 2million Dollars for
+        risking the lives of the Patients on Valence. <br /><br />Should ay of
+        your prescriptions to any patient end up to be wrong, overdosed or
+        underdosed, you will be paying the fine of 4million Naira to that
+        Patient. <br /><br />Your MBA licence willl be verfied to be authentic,
+        therefore if after verification it happens to be false or forged, you
+        will be jailed for 5years for the crime of Forgery.<br /><br />
+        You are to work hard and show love and care to all patients to avoid
+        complains from the patients, should up to Five patients complain of your
+        incompetence on the platform, you will have to be restrained from seeing
+        them for a particular period of time for their safety.<br /><br />
+        By agreeing to the listed terms above, you need to click on the "I
+        Agree" button below to accept and proceed to filling all needed details
+        before proceeding to see your patients. Do you agree to the Terms and
+        Conditions of this form?
+      </p>
+      <a href=""
+        ><button type="button" class="agree" onclick="seeDetails(event)">I Agree</button></a
+      >
+      
+       </body>
+  <script src="../js/confirmation.js"></script>
+</html>

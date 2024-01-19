@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../css/patientProfile.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+
+      <div class="navigationLinks1">
+        <a href="./patient.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+      <div class="navigationLinks2">
+        <a href="../views/ourDoctors.html"><button><img src="../images/nurse_7024848.png" alt="">Our Doctors</button></a>
+        <a href="../views/kits.html"><button><img src="../images/equipment_5986725.png" alt="">Our Kits</button></a>
+        <a href="../views/joinCommunity.html"><button><img src="../images/link_4948833.png" alt="">Join the Community</button></a>
+        <a href="">
+          <div class="dropdown">
+            <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Personalized Care</button></a>
+            <div class="dropdown-menu">
+              <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">Diabetic Care</a>
+              <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">Hypertensive Care</a>
+              <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">Blood Pressure Care</a>
+              <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">HIV/AIDS Care</a>
+            </div>
+          </div>
+          <a href="">
+            <div class="dropdownorg">
+              <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Support</button></a>
+              <div class="dropdown-menu-org">
+                <a href="../views/contactUs.html"><button><img src="../images/right-down_5712572.png" alt="">Contact Us</button></a>
+                <a href="../views/aboutUs.html"><button><img src="../images/right-down_5712572.png" alt="">About Us</button></a>
+              </div>
+            </div>
+          </a>
+      </div>
+      <div class="navigationLinks3">
+        <a href="../views/cart.html"><button class="button1"><img src="../images/" alt="">My Cart</button></a>
+        <a href="../index.html"><button class="button2">Log Out</button></a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="links">
+          <a href="../index.html">Log Out</a>
+          <a href="../views/cart.html">My Cart</a>
+          <a href="../views/ourDoctors.html">Our Doctors</a>
+          <a href="../views/kits.html">Our Kits</a>
+          <a href="../views/joinCommunity.html">Join the Community</a>
+          <a href="../views/dashboard.html">Personalized Care</a>           
+          <a href="../views/contactUs.html">Contact Us</a>
+          <a href="../views/aboutUs.html" class="lastLinka">About Us</a>
+        </div>
+    </div>
+    </nav>
+    <!-- <h1 id="fillProfile"></h1> -->
+
+    <h1 id="welcomeUser"></h1>
+    <section class="display">
+      <div id="profile">
+        <div class="img">
+          <button id="img">
+            <img src="../images/9220248.jpg" alt=""> 
+          <p id="profileName" class="profileName"></p>
+          <p id="profileEmail" class="profileEmail"></p>
+          </button>
+           <div class="profileLinks">
+            <div class="profileHeadings">
+              <a href="#profileContent" id="profileArea"><button>My Profile</button></a
+              ><br /><br />
+              <a href="../views/bookedDoctors.html"><button>My Doctors</button></a
+              ><br /><br />
+              <a href="#yourKits"><button>My Kits</button></a><br><br>
+            </div>
+            <div class="division">
+            </div>
+            <div class="deleteAccount">
+                  <a href="../views/changePassword.html"><img src="../images/lock_5312196.png" alt="">Change Password</a>
+                  <a href="../views/changeemail.html"><img src="../images/message_8367877.png" alt="">Change Email</a>
+                  <!-- <a href="../views/forgotPassword.html"><img src="../images/message_8367877.png" alt="">Forgot Password</a> -->
+                  <a href="../index.html" class="logOutt"><img src="../images/left-arrow_13077265.png" alt="">Log Out</a>
+            </div>
+           </div>
+        </div>
+
+        <div class="subMenus">
+          <form class="profileContent" id="profileContent">
+            <h1>Profile Details</h1>
+            <div class="dobAge">
+              <label for="email"
+              >Date Of Birth <br />
+              <input type="text" name="dob" id="dob" />
+              <p class="errorElement" style="color: red; display: none;"></p>
+              </label
+            ><br /><br />
+            <label for="email"
+              >Age <br />
+              <input type="text" name="age" id="age" />
+              <p class="errorElement" style="color: red; display: none;"></p>
+              </label
+            ><br /><br />
+            </div>
+
+
+           <div class="phoneHome">
+            <label for="phoneNumber"
+            >Phone Number <br />
+            <input type="tel" name="phone_number" id="phone_number" /></label
+          ><br /><br />
+          <label for="homeAddress"
+            >Home Address <br />
+            <input type="text" name="home_address" id="home_address" /></label
+          ><br /><br />
+         </div>
+          <div class="diagnosisYears">
+          <label for="diagnosis"
+            >Diagnosis <br />
+            <input type="text" name="diagnosis" id="diagnosis" /></label
+          ><br /><br />
+          <label for="yearsWithIllness"
+            >Years With Illness <br />
+            <input
+              type="text"
+              years_with_illness="years_with_illness"
+              id="years_with_illness" /></label
+          ><br />
+          </div>
+            <a href=""><button type="submit">Save</button></a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  <script src="../js/patientProfile.js"></script>
+  <!-- <footer>
+    <div class="footerSection">
+      <div class="getStarted">
+        <p class="getStartedp1">
+          See a Doctor for free after <br />
+          Paying a once in a year Subscription.
+        </p>
+        <p class="getStartedp2">
+          What are you waiting for? Click on this button to <br />
+          get started...
+        </p>
+      </div>
+      <div class="getStartedButton">
+        <a href="../views/ourDoctors.html"><button>See a Doctor</button></a>
+      </div>
+    </div>
+
+    <div class="footerLinks">
+      <div class="unordered">
+        <ul>
+          <h6>ACTIVITIES</h6>
+          <br />
+          <a href="../views/ourDoctors.html">Meet Doctors</a
+          ><br />
+          <a href="">Join Conversation</a
+          ><br />
+          <a href="../views/kits.html">Kit</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>App</h6>
+          <br />
+          <a href="../views/aboutUs.html">About Us</a
+          ><br />
+          <a href="">Collections</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>SUPPORT</h6>
+          <br />
+          <a href="">Help Center</a
+          ><br />
+          <a href="../views/contactUs.html">Contact Us</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>INFORMATION</h6>
+          <br />
+          <a href="">Privacy Policy</a
+          ><br />
+          <a href="">Terms Of Use</a
+          ><br />
+        </ul>
+      </div>
+      <div class="valenceLogo">
+        <a href="../index.html">VALENCE</a>
+        <img src="../images/logo2.png" alt="" />
+      </div>
+    </div>
+    <div class="copywright">
+      <ul>
+        <li>@2023 VALENCE</li>
+      </ul>
+    </div>
+  </footer> -->
+</html>

@@ -1,0 +1,1484 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Neuton";
+  background-repeat: no-repeat;
+  /* background-color: rgba(240, 248, 255, 0.146); */
+  background: url(../images/medical-equipment-with-stethoscope.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* .staticNotice{
+  color: white;
+  position: fixed;
+  font-size: 30px;
+  padding: 20px;
+  text-align: left;
+} */
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-family: "Dancing Script";
+  font-size: 20px;
+  font-weight: bold;
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.dropdown {
+  width: 8.7vw;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  width: 20vw;
+  height: fit-content;
+  border-radius: 10px;
+  border-style: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdown:hover .dropdown-menu {
+  padding: 20px;
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdown:hover .dropdown-menu a {
+  background: none;
+  color: black;
+  font-size: 15px;
+  font-family: "Neuton";
+  width: 30vw;
+}
+/* .navigationLinks2 a::after{
+      content: "";
+      display: block;
+      width: 0.5;
+      height: 2px; 
+      background-color: grey;
+      position: relative;
+      bottom: 0;
+      left: 0;
+  } */
+
+.dropdownorg {
+  width: 8.7vw;
+  margin-top: 1%;
+  margin-left: 1%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu-org {
+  width: 10vw;
+  height: fit-content;
+  border: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu-org img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdownorg:hover .dropdown-menu-org {
+  /* padding: 20px; */
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdownorg:hover .dropdown-menu-org a {
+  background: none;
+  color: black;
+  font-size: 15px;
+  width: 40vw;
+}
+.navigationLinks2 {
+  /* border: 1px solid red; */
+  width: 100vw;
+  margin-top: 1%;
+  margin-left: 10%;
+}
+.navigationLinks2 a button {
+  font-family: "Neuton";
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: none;
+  font-weight: bold;
+  width: max-content;
+  height: 6vh;
+  font-size: 13px;
+  color: black;
+}
+.navigationLinks2 img {
+  width: 2vw;
+  height: auto;
+}
+.navigationLinks2 a button:hover {
+  background-color: skyblue;
+}
+.navigationLinks3 {
+  margin-top: 1%;
+  width: 45%;
+  /* border: 1px solid red; */
+}
+.navigationLinks3 button {
+  transition: 1s;
+  font-family: Neuton;
+  border: none;
+  font-size: 15px;
+  background: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  height: 6vh;
+  width: 7vw;
+}
+.navigationLinks3 a .button1 {
+  margin-left: 25%;
+  margin-top: 1%;
+  color: #301af1;
+  background-color: white;
+}
+.navigationLinks3 a .button1:hover {
+  color: white;
+  border-radius: 30px;
+  transform: scale(1, 1);
+  background-color: rgb(4, 4, 85);
+}
+.navigationLinks3 a .button2 {
+  margin-top: 1%;
+  color: white;
+  background-color: rgb(4, 4, 85);
+}
+.navigationLinks3 a .button2:hover {
+  border-radius: 20px;
+  transform: scale(1, 1);
+  background-color: black;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: aliceblue;
+  color: black;
+  height: 8vh;
+  border: none;
+  outline: none;
+  border: 1px solid #5340ff;
+  z-index: 1000;
+}
+.hamburgerMenuBar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+}
+.links {
+  display: none;
+}
+.body2 {
+  background-color: rgba(240, 248, 255, 0.723);
+}
+.hero2 .notice {
+  text-align: center;
+  margin-top: 3%;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+
+.hero {
+  background-position: center;
+  padding: 1px;
+  margin-top: 1%;
+  background: url(../images/myBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  scroll-behavior: initial;
+  scroll-snap-type: mandatory;
+  transition: background-image 8s ease;
+}
+.heroHeading,
+.heroParagraph {
+  margin: 0;
+  padding: 0;
+}
+.hero .heroHeading {
+  font-family: "Dancing Script";
+  color: #301af1;
+  margin-left: 2%;
+  font-weight: 400;
+  font-size: 55px;
+  text-align: left;
+  margin-top: 20%;
+}
+.hero p {
+  transition: 8s ease;
+  margin-left: 2%;
+  font-family: "Dancing Script";
+  color: black;
+  font-size: 40px;
+  text-align: left;
+  padding: 20px;
+}
+.hero button {
+  width: 10vw;
+  height: 7vh;
+  border: none;
+  font-weight: 500;
+  margin-left: 3%;
+  font-size: 25px;
+  border-radius: 15px;
+  transition: 5s;
+  margin-top: 1%;
+  font-family: "Neuton";
+  color: black;
+  background-color: aliceblue;
+}
+.hero button:hover {
+  color: white;
+  border-radius: 30px;
+  transform: scale(1, 1);
+  background-color: rgba(63, 43, 248, 0.933);
+}
+.intro {
+  margin-top: 5%;
+  width: 96%;
+  margin-left: 2%;
+  background-color: rgba(240, 248, 255, 0.748);
+  padding: 20px;
+  /* border: 1px solid red; */
+  height: 70vh;
+  display: flex;
+}
+.introImage {
+  margin-left: 15%;
+  height: 70vh;
+  margin-top: 6%;
+  width: 40%;
+}
+.introImage img {
+  border-left: outset;
+  border-radius: 10px;
+  margin-left: 3%;
+  width: 37vw;
+  height: auto;
+}
+.introContent {
+  margin-left: 2%;
+  height: 60vh;
+  width: 50%;
+  margin-top: 3%;
+  padding: 20px;
+}
+.introContent h1 {
+  text-align: left;
+  font-size: 30px;
+  font-family: "Neuton";
+  color: #5340ff;
+  /* margin-top: 20%; */
+}
+.introContent h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+.introContent a button {
+  border: none;
+  margin-left: 3%;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Neuton";
+  height: 7vh;
+  width: 8vw;
+  margin-top: 1%;
+  color: white;
+  background-color: rgb(4, 4, 85);
+}
+.introContent p {
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+}
+.ourKindOfCare {
+  /* background-color: rgba(240, 248, 255, 0.755); */
+  margin-left: 12%;
+  width: 75vw;
+  padding: 20px;
+  /* border: 1px solid red; */
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+}
+h2 {
+  margin-top: 7%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 35px;
+  font-family: "Dancing Script";
+  color: navy;
+}
+.care {
+  transition: 1s;
+  background-color: white;
+  padding: 20px;
+  height: 50vh;
+  width: 22vw;
+  /* border-style: ridge; */
+  border-radius: 20px;
+  display: grid;
+}
+.care:hover {
+  transform: scale(1, 1);
+}
+.care h2 {
+  color: #301af1;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.care p {
+  color: black;
+  font-size: 18px;
+}
+.care button {
+  border-radius: 100px;
+  background-color: aliceblue;
+  height: 60px;
+  width: 60px;
+  border: none;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+.care button img {
+  margin-top: 4%;
+  margin-bottom: 6%;
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+}
+.listDoctors {
+  margin-left: 4%;
+  /* border: 1px solid red; */
+  /* background-color: aliceblue; */
+  margin-top: 3%;
+  display: grid;
+  gap: 28px;
+  padding: 20px;
+  width: 92%;
+  grid-template-columns: auto auto auto;
+}
+.doctors {
+  /* border: 1px solid red; */
+  background-color: aliceblue;
+  padding: 20px;
+  width: 28vw;
+}
+.doctors img {
+  width: 25vw;
+  padding: 0;
+  height: auto;
+  /* border-radius: 20px; */
+}
+.p {
+  padding: 20px;
+  margin-top: 2%;
+  width: 100%;
+  background-color: aliceblue;
+  font-size: 25px;
+}
+.p .name {
+  font-weight: 500;
+  font-family: "Neuton";
+  font-size: 20px;
+  text-align: left;
+}
+.p .specialization {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Neuton";
+  text-align: left;
+}
+.ourPartners h1 {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 35px;
+  color: navy;
+}
+.ourPartners {
+  margin-top: 5%;
+}
+.ourPartners .partners {
+  background-color: rgba(240, 248, 255, 0.255);
+  /* border: 1px solid red; */
+  width: 60%;
+  margin-left: 20%;
+  padding: 20px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto auto auto;
+}
+.partners a img {
+  width: 10vw;
+  height: 10vh;
+  margin-top: 5%;
+  border-radius: 6px;
+  /* border: 1px solid red; */
+}
+.kitts {
+  /* border: 1px solid red; */
+  margin-left: 1%;
+  width: 97vw;
+  padding: 20px;
+  height: 100%;
+  margin-top: 5%;
+  font-size: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1px;
+}
+.frameKit {
+  padding: 10px;
+  background-color: aliceblue;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: 5%;
+  width: 90%;
+}
+.kits {
+  width: 20vw;
+  height: auto;
+}
+.kits img {
+  width: 25vw;
+  height: 40vh;
+  margin-top: 6%;
+  padding: 0;
+  margin-left: 6%;
+  border-radius: 20px;
+}
+.kitContent {
+  background-color: aliceblue;
+  width: 100%;
+  border-radius: 10px;
+}
+.kitTag {
+  display: flex;
+  margin-top: 4%;
+  width: 27vw;
+  padding: 20px;
+}
+.kitTag .kitName {
+  font-family: "Dancing Script";
+  color: black;
+  font-size: 18px;
+  font-weight: bolder;
+  width: 50%;
+}
+.kitTag .amount {
+  font-weight: bolder;
+  font-family: "Dancing Script";
+  margin-left: 60%;
+}
+.kits .description {
+  color: black;
+  margin-left: 6%;
+  font-family: "Dancing Script";
+}
+.price a button {
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  border: hidden;
+  font-family: "Neuton";
+  border-radius: 10px;
+  width: 7vw;
+  height: 5vh;
+  margin-left: 6%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  background-color: black;
+}
+.testimonials {
+  width: 100%;
+  margin-top: 10%;
+}
+.testimonies {
+  margin-left: 7%;
+  width: 85%;
+  display: grid;
+  gap: 3px;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+}
+.testimonies .testimony {
+  margin-left: 4%;
+  background-color: rgb(221, 236, 250);
+  border: none;
+  border-radius: 10px;
+  width: 24vw;
+  height: 40vh;
+}
+.testimony .name {
+  font-family: "Dancing Script";
+  color: #301af1;
+  font-size: 20px;
+}
+.testimony p {
+  font-family: "Neuton";
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  padding: 20px;
+}
+.footer {
+  height: fit-content;
+  width: 100%;
+  margin-top: 1%;
+}
+.footerSection {
+  margin-top: 5%;
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  background-color: black;
+}
+.footerLinks {
+  background-color: rgba(240, 248, 255, 0.528);
+  /* height: 5vh; */
+  display: flex;
+}
+.getStarted {
+  padding: 20px;
+  width: 60%;
+}
+.getStartedp1 {
+  font-family: "Dancing Script";
+  margin-top: 5%;
+  margin-left: 40%;
+  font-weight: bold;
+  font-size: 45px;
+  color: white;
+}
+.getStartedp2 {
+  font-family: "Neuton";
+  margin-left: 40%;
+  font-size: 22px;
+  color: grey;
+}
+.getStartedButton {
+  padding: 20px;
+  width: 50%;
+}
+.getStartedButton a button {
+  border: none;
+  font-size: 15px;
+  border-radius: 6px;
+  margin-left: 2%;
+  width: 10vw;
+  height: 9vh;
+  margin-top: 8%;
+  color: white;
+  font-family: "Neuton";
+  background-color: #301af1;
+  text-decoration: none;
+}
+ul {
+  font-size: 8px;
+  padding-left: 70px;
+  margin-top: 1%;
+  list-style: none;
+  display: block;
+  float: left;
+}
+ul > a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  font-size: 15px;
+}
+h6 {
+  font-weight: 700;
+  font-size: 15px;
+}
+.unordered {
+  margin-top: 5%;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+}
+
+footer .valenceLogo {
+  /* background-color: rgba(240, 248, 255, 0.528); */
+  margin-top: 5%;
+  margin-left: 15%;
+  /* border: 1px solid red; */
+}
+.valenceLogo a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10%;
+  font-family: "Dancing Script";
+  color: black;
+  font-size: 20px;
+}
+.valenceLogo img {
+  width: 5vw;
+  height: 10vh;
+}
+.copywright ul {
+  width: 100%;
+}
+.copywright li {
+  color: grey;
+  margin-left: 40%;
+  margin-bottom: 3%;
+  font-size: 15px;
+  /* margin-top: 10%; */
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .navigation {
+    /* display: none; */
+    height: fit-content;
+  }
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 20%;
+  }
+  .navigationLinks2 {
+    display: none;
+    gap: 10px;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 100vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .hero {
+    height: 150%;
+    margin-top: 20%;
+    background: url(../images/myBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .hero .heroHeading {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .hero p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .hero .button2 {
+    margin-bottom: 20%;
+    margin-top: 8%;
+    width: 20vw;
+    height: 7vh;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .introImage {
+    margin-left: 0%;
+    width: 40%;
+    height: 50vh;
+  }
+  .introImage img {
+    height: 50vh;
+    width: 50vw;
+  }
+  .introContent {
+    /* border: 1px solid red; */
+    padding: 0px;
+    margin-left: 20%;
+    width: 50%;
+    height: fit-content;
+  }
+  .introContent h1 {
+    margin-top: 0%;
+    font-size: 18px;
+  }
+  .introContent p {
+    /* width: fit-content; */
+    font-size: 10px;
+  }
+  .introContent a button {
+    font-size: 13px;
+    height: 6vh;
+    width: 15vw;
+    font-weight: 200;
+    margin-left: 8%;
+  }
+  .doctors {
+    width: 100%;
+  }
+  .doctors img {
+    width: 80vw;
+    height: auto;
+  }
+  h2 {
+    margin-top: 8%;
+    font-size: 25px;
+  }
+  .ourKindOfCare {
+    gap: 20px;
+    grid-template-columns: auto auto;
+    height: 100%;
+    margin-left: 10%;
+  }
+  .care {
+    width: 35vw;
+    height: 60vh;
+  }
+  .care h2 {
+    font-size: 18px;
+  }
+  .care p {
+    font-size: 12px;
+  }
+  .care button {
+    width: 40px;
+    height: 40px;
+  }
+  .care button img {
+    width: 5vw;
+    height: auto;
+  }
+  .listDoctors {
+    margin-left: 1%;
+    grid-template-columns: auto;
+  }
+  .ourPartners {
+    display: grid;
+  }
+  .ourPartners .partners {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    margin-right: 60%;
+  }
+  .partners a img {
+    height: 13vh;
+    width: 20vw;
+  }
+  .kitts {
+    /* margin-right: 5%; */
+    /* border: 1px solid red; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto;
+  }
+  .frameKit {
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+  }
+  .kits {
+    width: 100%;
+  }
+  .kits img {
+    border-radius: 0px;
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+  }
+  .kitTag {
+    width: 100%;
+    height: 100%;
+    /* border:  1px solid red; */
+  }
+  .price a button {
+    width: 15vw;
+    height: 8vh;
+  }
+  .testimonies {
+    /* border:  1px sloid red; */
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto;
+  }
+  .testimonies .testimony {
+    width: 70vw;
+  }
+  .testimony .name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #5340ff;
+  }
+  .testimony p {
+    font-size: 15px;
+    color: black;
+  }
+  .footerSection {
+    width: 100%;
+  }
+  .getStartedp1 {
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .getStartedp2 {
+    font-size: 15px;
+    margin-left: 20%;
+  }
+  .getStartedButton a button {
+    width: 20vw;
+    height: 8vh;
+    font-size: 18px;
+    background-color: aliceblue;
+    margin-top: 30%;
+    color: black;
+  }
+  .footerLinks {
+    padding: 20px;
+    /* border: 1px solid red; */
+  }
+  .unordered {
+    /* border: 1px solid red; */
+    margin-right: 20%;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+  }
+  ul h6 {
+    font-size: 15px;
+  }
+  ul a {
+    font-size: 13px;
+    color: grey;
+  }
+  .valenceLogo {
+    width: fit-content;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-right: 5%;
+  }
+  .valenceLogo a {
+    margin-top: 10%;
+    text-decoration: none;
+  }
+  .valenceLogo a img {
+    margin-right: 10%;
+    width: 10vw;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .navigation {
+    /* display: none; */
+    height: fit-content;
+  }
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 20%;
+  }
+  .navigationLinks2 {
+    display: none;
+    gap: 10px;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 40vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .hero {
+    height: 150%;
+    margin-top: 20%;
+    background: url(../images/myBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .hero .heroHeading {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .hero p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .hero .button2 {
+    margin-bottom: 20%;
+    margin-top: 8%;
+    width: 20vw;
+    height: 7vh;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .intro {
+    display: grid;
+    /* border: 1px solid red; */
+    height: fit-content;
+  }
+  .introImage {
+    margin-left: 0%;
+    width: 100%;
+    height: auto;
+  }
+  .introImage img {
+    height: auto;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .introContent {
+    /* border: 1px solid red; */
+    padding: 0px;
+    /* margin-left: 25%; */
+    width: 100%;
+    height: fit-content;
+  }
+  .introContent h1 {
+    margin-top: 0%;
+    font-size: 13px;
+  }
+  .introContent h1 p {
+    margin: 0;
+    padding: 0;
+  }
+  .introContent p {
+    /* width: fit-content; */
+    font-size: 11px;
+  }
+  .introContent a button {
+    font-size: 13px;
+    height: 6vh;
+    width: 20vw;
+    font-weight: 200;
+    margin-left: 8%;
+  }
+  .doctors {
+    width: 100%;
+  }
+  .doctors img {
+    width: 80vw;
+    height: auto;
+  }
+  h2 {
+    /* border: 1px solid red; */
+    margin-top: 10%;
+    font-size: 25px;
+  }
+  .ourKindOfCare {
+    /* border: 1px solid red; */
+    gap: 20px;
+    grid-template-columns: auto auto;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-left: 0px;
+  }
+  .care {
+    width: 40vw;
+    height: 40vh;
+  }
+  .care h2 {
+    font-family: "Neuton";
+    font-size: 15px;
+  }
+  .care p {
+    font-size: 10px;
+  }
+  .care h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .care button {
+    width: 30px;
+    height: 30px;
+  }
+  .care button img {
+    width: 5vw;
+    height: auto;
+  }
+  .listDoctors {
+    margin-left: 1%;
+    grid-template-columns: auto;
+  }
+  .ourPartners {
+    display: grid;
+  }
+  .ourPartners .partners {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    margin-right: 60%;
+  }
+  .partners a img {
+    height: 13vh;
+    width: 20vw;
+  }
+  .kitts {
+    /* margin-right: 5%; */
+    /* border: 1px solid red; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto;
+  }
+  .frameKit {
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+  }
+  .kits {
+    width: 100%;
+  }
+  .kits img {
+    border-radius: 0px;
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+  }
+  .kitTag {
+    width: 100%;
+    height: 100%;
+    /* border:  1px solid red; */
+  }
+  .kitTag .amount {
+    margin-left: 20%;
+    font-size: 15px;
+  }
+  .price a button {
+    width: 15vw;
+    height: 6vh;
+    font-size: 10px;
+  }
+  .kits .description {
+    font-size: 13px;
+    font-family: "Neuton";
+  }
+  .testimonies {
+    /* border:  1px sloid red; */
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto;
+  }
+  .testimonies .testimony {
+    width: 70vw;
+  }
+  .testimony .name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #5340ff;
+  }
+  .testimony p {
+    font-size: 15px;
+    color: black;
+  }
+  .footerSection {
+    width: 100%;
+  }
+  .getStartedp1 {
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .getStartedp2 {
+    font-size: 15px;
+    margin-left: 20%;
+  }
+  .getStartedButton a button {
+    width: 20vw;
+    height: 8vh;
+    font-size: 18px;
+    background-color: aliceblue;
+    margin-top: 30%;
+    color: black;
+  }
+  .footerLinks {
+    padding: 20px;
+    /* border: 1px solid red; */
+  }
+  .unordered {
+    /* border: 1px solid red; */
+    margin-right: 20%;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+  }
+  ul {
+    margin-left: 2%;
+    /* border: 1px solid red; */
+  }
+  ul h6 {
+    /* margin-left: 2%; */
+    font-size: 15px;
+    /* border: 1px solid red; */
+  }
+  ul a {
+    /* margin-left: 2%; */
+    font-size: 13px;
+    color: grey;
+  }
+  .valenceLogo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .navigation {
+    /* display: none; */
+    height: fit-content;
+  }
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 8vw;
+    height: auto;
+    margin-left: 20%;
+  }
+  .navigationLinks2 {
+    display: none;
+    gap: 10px;
+  }
+  .navigationLinks3 {
+    display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 100vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .hero {
+    height: 150%;
+    margin-top: 20%;
+    background: url(../images/myBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .hero .heroHeading {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .hero p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .hero .button2 {
+    margin-bottom: 20%;
+    margin-top: 8%;
+    width: 20vw;
+    height: 7vh;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .introImage {
+    margin-left: 0%;
+    width: 40%;
+    height: 50vh;
+  }
+  .introImage img {
+    height: 50vh;
+    width: 50vw;
+  }
+  .introContent {
+    /* border: 1px solid red; */
+    padding: 0px;
+    margin-left: 20%;
+    width: 50%;
+    height: fit-content;
+  }
+  .introContent h1 {
+    margin-top: 2%;
+    font-size: 18px;
+  }
+  .introContent p {
+    /* width: fit-content; */
+    font-size: 13px;
+  }
+  .introContent a button {
+    font-size: 13px;
+    height: 6vh;
+    width: 15vw;
+    font-weight: 200;
+    margin-left: 8%;
+  }
+
+  h2 {
+    margin-top: 8%;
+    font-size: 25px;
+  }
+  .ourKindOfCare {
+    gap: 20px;
+    grid-template-columns: auto auto;
+    height: 100%;
+    margin-left: 10%;
+  }
+  .care {
+    width: 35vw;
+    height: 60vh;
+  }
+  .care h2 {
+    font-size: 18px;
+  }
+  .care p {
+    font-size: 12px;
+  }
+  .care button {
+    width: 40px;
+    height: 40px;
+  }
+  .care button img {
+    width: 5vw;
+    height: auto;
+  }
+  .listDoctors {
+    gap: 10px;
+    margin-left: 1%;
+    grid-template-columns: auto;
+  }
+  .doctors {
+    /* border: 1px solid red; */
+    width: 55vw;
+    margin-left: 20%;
+  }
+  .doctors img {
+    width: 50vw;
+    height: auto;
+  }
+  .ourPartners {
+    display: grid;
+  }
+  .ourPartners .partners {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    width: 80vw;
+    /* border: 1px solid red; */
+    margin-left: 10%;
+  }
+  .partners a img {
+    height: 13vh;
+    width: 20vw;
+  }
+  .kitts {
+    /* margin-right: 5%; */
+    /* border: 1px solid red; */
+    display: grid;
+    gap: 10px;
+    margin-left: 1%;
+    grid-template-columns: auto;
+  }
+  .frameKit {
+    margin-left: 20%;
+    /* border: 1px solid red; */
+    width: 60vw;
+    height: auto;
+  }
+  .kits {
+    width: 100%;
+  }
+  .kits .amount {
+    font-size: 13px;
+  }
+  .kits .name {
+    font-size: 15px;
+  }
+  .kits img {
+    border-radius: 0px;
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+  }
+  .kitTag {
+    width: 100%;
+    height: 100%;
+    /* border:  1px solid red; */
+  }
+  .price a button {
+    width: 15vw;
+    height: 8vh;
+  }
+  .testimonies {
+    /* border:  1px sloid red; */
+    padding: 20px;
+    margin-left: 0%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+  }
+  .testimonies .testimony {
+    width: 30vw;
+    height: auto;
+  }
+  .testimony .name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #5340ff;
+  }
+  .testimony p {
+    font-size: 15px;
+    color: black;
+  }
+  .footerSection {
+    width: 100%;
+  }
+  .getStartedp1 {
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .getStartedp2 {
+    font-size: 15px;
+    margin-left: 20%;
+  }
+  .getStartedButton a button {
+    width: 20vw;
+    height: 8vh;
+    font-size: 18px;
+    background-color: aliceblue;
+    margin-top: 30%;
+    color: black;
+  }
+  .footerLinks {
+    padding: 20px;
+    /* border: 1px solid red; */
+  }
+  .unordered {
+    /* border: 1px solid red; */
+    margin-right: 20%;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+  }
+  ul h6 {
+    font-size: 15px;
+  }
+  ul a {
+    font-size: 13px;
+    color: grey;
+  }
+  .valenceLogo {
+    width: fit-content;
+    height: fit-content;
+    /* border: 1px solid red; */
+    margin-right: 5%;
+  }
+  .valenceLogo a {
+    margin-top: 10%;
+    text-decoration: none;
+  }
+  .valenceLogo a img {
+    margin-right: 10%;
+    width: 10vw;
+    height: auto;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Email</title>
+    <link rel="stylesheet" href="../css/changeemail.css ">
+</head>
+<body>
+    <nav class="navigation">
+
+        <div class="navigationLinks1">
+          <a href="./patient.html"
+            ><img src="../images/logo2.png" alt="" /><br />VALENCE</a>
+        </div>
+        <div class="navigationLinks2">
+          <a href="../views/ourDoctors.html"><button><img src="../images/nurse_7024848.png" alt="">Our Doctors</button></a>
+          <a href="../views/kits.html"><button><img src="../images/equipment_5986725.png" alt="">Our Kits</button></a>
+          <a href="../views/joinCommunity.html"><button><img src="../images/link_4948833.png" alt="">Join the Community</button></a>
+          <a href="">
+            <div class="dropdown">
+              <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Personalized Care</button></a>
+              <div class="dropdown-menu">
+                <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">Diabetic Care</a>
+                <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">Hypertensive Care</a>
+                <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">Blood Pressure Care</a>
+                <a href="../views/dashboard.html"><img src="../images/right-down_5712572.png">HIV/AIDS Care</a>
+              </div>
+            </div>
+            <a href="">
+              <div class="dropdownorg">
+                <a href="#"><button><img src="../images/user-protection_8184375.png" alt="">Support</button></a>
+                <div class="dropdown-menu-org">
+                  <a href="../views/contactUs.html"><button><img src="../images/right-down_5712572.png" alt="">Contact Us</button></a>
+                  <a href="../views/aboutUs.html"><button><img src="../images/right-down_5712572.png" alt="">About Us</button></a>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div class="navigationLinks3">
+          <button class="button2" onclick="logOut()">Log Out</button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div class="hamburgerMenuBar"></div>
+          <div class="hamburgerMenuBar"></div>
+          <div class="hamburgerMenuBar"></div>
+          <div class="hamburgerMenuBar"></div>
+          <div class="links">
+            <a href="../index.html">Log Out</a>
+            <a href="../views/patientProfile.html">My Profile</a>
+            <a href="../views/ourDoctors.html">Our Doctors</a>
+            <a href="../views/kits.html">Our Kits</a>
+            <a href="../views//joinCommunity.html">Join the Community</a>
+            <a href="../views/dashboard.html">Personalized Care</a>           
+            <a href="../views/contactUs.html">Contact Us</a>
+            <a href="../views/aboutUs.html" class="lastLinka">About Us</a>
+          </div>
+      </div>
+      </nav>
+
+      <section class="email">
+        <form class="changeEmail" id="changeEmail">
+            <h1>Change Email</h1>
+            <label for="email">Enter Existing Email <br />
+              <input type="email" placeholder="Enter old Email" id="oldEmail" />
+              </label>
+              <p class="oldEmailError" id="oldEmailError"></p>
+            <br /><br />
+            <label for="email">Enter New Email <br />
+              <input type="email" placeholder="Enter new Email" id="newEmail" />
+              </label>
+              <p class="newEmailError" id="newEmailError"></p>  
+              <br /><br />
+              <a href=""><button type="submit">Change Email</button></a>
+        </form>
+      </section>
+</body>
+<script src="../js/changeemail.js"></script>
+</html>

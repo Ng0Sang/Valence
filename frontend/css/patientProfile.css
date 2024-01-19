@@ -1,0 +1,786 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nueton";
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  background-size: inherit;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+  font-family: monospace;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Dancing Script";
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.navigationLinks2 {
+  /* border: 1px solid red; */
+  width: 90vw;
+  margin-left: 3%;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: aliceblue;
+  color: black;
+  height: 8vh;
+  border: none;
+  outline: none;
+  border: 1px solid #5340ff;
+  z-index: 1000;
+}
+.hamburgerMenuBar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+}
+.links {
+  display: none;
+}
+.dropdown {
+  width: 8.7vw;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  width: 20vw;
+  height: fit-content;
+  border-radius: 10px;
+  border-style: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu img {
+  width: 2vw;
+  height: 4vh;
+}
+
+.dropdown:hover .dropdown-menu {
+  padding: 20px;
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdown:hover .dropdown-menu a {
+  background: none;
+  color: black;
+  font-size: 15px;
+  font-family: "Nueton";
+  width: 30vw;
+}
+.dropdownorg {
+  width: 8.7vw;
+  margin-top: 1%;
+  margin-left: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu-org {
+  border-radius: 10px;
+  width: 10vw;
+  height: fit-content;
+  border: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu-org img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdownorg:hover .dropdown-menu-org {
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdownorg:hover .dropdown-menu-org a {
+  background: none;
+  color: black;
+  font-size: 15px;
+}
+/* .navigationLinks2 a::after{
+      content: "";
+      display: block;
+      width: 0.5;
+      height: 2px; 
+      background-color: grey;
+      position: relative;
+      bottom: 0;
+      left: 0;
+  } */
+.navigationLinks2 a button {
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: none;
+  border-color: grey;
+  font-weight: 600;
+  font-family: "Nueton";
+  width: max-content;
+  height: 6vh;
+  font-size: 13px;
+  color: black;
+}
+.navigationLinks2 a img {
+  width: 2vw;
+  height: auto;
+}
+.navigationLinks2 a button:hover {
+  background-color: skyblue;
+}
+.navigationLinks3 {
+  width: 30vw;
+  margin-right: 3%;
+  /* border: 1px solid red; */
+}
+.navigationLinks3 button {
+  transition: 1s;
+  border: none;
+  font-size: 18px;
+  font-family: "Dancing Script";
+  background: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 18px;
+  height: 7vh;
+  width: 8vw;
+}
+.navigationLinks3 .button1 {
+  margin-top: 1%;
+  color: black;
+  background-color: white;
+}
+.navigationLinks3 .button1:hover {
+  border-radius: 20px;
+  color: white;
+  transform: scale(1, 1);
+  background-color: black;
+}
+.navigationLinks3 .button2 {
+  margin-top: 1%;
+  color: white;
+  background-color: black;
+}
+.navigationLinks3 .button2:hover {
+  border-radius: 20px;
+  transform: scale(1, 1);
+  background-color: rgb(4, 4, 85);
+}
+.profileName {
+  color: white;
+  margin-top: 5%;
+  font-family: "Dancing Script";
+  font-size: 25px;
+}
+.profileEmail {
+  text-align: center;
+  color: white;
+  font-family: "Dancing Script";
+  margin-top: 5%;
+  font-size: 25px;
+}
+h1 {
+  font-size: 15px;
+  margin-top: 10%;
+  margin-bottom: 3%;
+  text-align: center;
+  font-family: "Nueton";
+  color: black;
+}
+/* form {
+  background-color: aliceblue;
+  border-radius: 40px;
+  margin-top: 5%;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+} */
+.nameEmail label {
+  margin-left: 4%;
+}
+.dobAge {
+  padding: 20px;
+  display: flex;
+}
+.dobAge label {
+  margin-left: 4%;
+}
+.phoneHome {
+  padding: 20px;
+  display: flex;
+}
+.phoneHome label {
+  margin-left: 4%;
+}
+.diagnosisYears {
+  padding: 20px;
+  display: flex;
+}
+.diagnosisYears label {
+  margin-left: 4%;
+}
+.display {
+  padding: 20px;
+  display: grid;
+}
+.img {
+  background-color: black;
+  color: orangered;
+  margin-left: 2%;
+  border: 1px solid grey;
+  border-radius: 20px;
+  display: inline;
+  width: 30%;
+}
+.img #img {
+  margin-top: 10%;
+  margin-left: 18%;
+  /* padding: 20px; */
+  height: 250px;
+  width: 250px;
+  border-radius: 250px;
+  background-color: aliceblue;
+}
+.img button img {
+  border-radius: 250px;
+  width: 240px;
+  height: 240px;
+}
+.profileHeadings {
+  margin-left: 30%;
+  /* border: 1px solid red; */
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 30%;
+  height: 25vh;
+  padding: 20px;
+}
+.profileHeadings a button {
+  transition: 6s;
+  margin-left: 1%;
+  border-radius: 4px;
+  font-family: "Nueton";
+  border: none;
+  background: none;
+  font-weight: bold;
+  width: 7vw;
+  height: 5vh;
+  font-size: 16px;
+  color: #5340ff;
+}
+.profileHeadings a button::after {
+  margin-left: 15%;
+  content: "";
+  display: grid;
+  width: 5vw;
+  position: relative;
+  height: 2px;
+  background-color: grey;
+}
+.profileHeadings a button:hover {
+  transform: scale(2, 1);
+}
+.img input {
+  margin-right: 30%;
+}
+.subMenus {
+  background-color: white;
+  margin-left: 4%;
+  height: 100%;
+  padding: 20px;
+  width: 60%;
+  /* border: 1px solid grey; */
+  border-radius: 20px;
+}
+.profileContent {
+  background-color: white;
+  /* border: 1px solid red; */
+  display: grid;
+  margin-left: 5%;
+  /* padding: 20px; */
+  width: 90%;
+  height: 100%;
+}
+label {
+  color: #5340ff;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Nueton";
+}
+input {
+  /* text-align: center; */
+  font-size: 20px;
+  padding: 20px;
+  width: 20vw;
+  height: 9vh;
+  font-family: "Nueton";
+
+  background: none;
+  height: 0;
+  border: none;
+  color: black;
+  border-bottom: 1px solid black;
+  outline: 0;
+  border-radius: 2px;
+}
+#profile {
+  display: flex;
+}
+.profileLinks {
+  display: block;
+}
+.profileContent h1 {
+  margin-top: 3%;
+  font-family: "Nueton";
+  font-weight: bold;
+  font-size: 15px;
+}
+.profileContent a button {
+  border: none;
+  font-size: 23px;
+  border-radius: 35px;
+  margin-left: 70%;
+  width: 17vh;
+  height: 7vh;
+  margin-top: 4%;
+  font-family: "Nueton";
+  color: white;
+  background-color: #422ff1;
+  text-decoration: none;
+  transition: 6s;
+}
+.profileContent a button:hover {
+  background-color: #270ffa;
+  transform: scale(1.2, 1.2);
+}
+.subMenus .yourDoctors {
+  margin-top: 4%;
+  border-radius: 20px;
+}
+.subMenus .yourKits {
+  margin-top: 5%;
+  border-radius: 20px;
+}
+.yourDoctors h1 {
+  font-size: 25px;
+}
+.yourKits h1 {
+  font-size: 25px;
+}
+.division {
+  margin-bottom: 3%;
+  margin-right: 3%;
+}
+.division::after {
+  margin-left: 3%;
+  content: "";
+  display: grid;
+  width: 0.2;
+  height: 2px;
+  background-color: white;
+}
+.deleteAccount {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 10px;
+}
+.deleteAccount a {
+  display: flex;
+  margin-left: 30%;
+  font-weight: bold;
+  font-family: "Dancing Script";
+  text-decoration: none;
+  font-size: 20px;
+  color: #5340ff;
+}
+.deleteAccount .logOutt {
+  font-weight: 500;
+  font-family: "Nueton";
+  color: red;
+}
+.deleteAccount img {
+  width: 1.5vw;
+  height: auto;
+}
+
+@media screen and (max-width: 399px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+   display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .profileName,
+  .profileEmail {
+    font-size: 15px;
+    font-family: "Nueton";
+  }
+  #profile {
+    display: grid;
+    width: 100%;
+    height: 100%;
+  }
+  .img #img {
+    width:150px;
+    height:150px;
+    margin-left: 23%;
+  }
+  #img img{
+    width:150px;
+    height:150px;
+  }
+  .img {
+    width: 95%;
+  }
+  .division {
+    display: none;
+  }
+  .profileLinks {
+    margin-bottom: 5%;
+    /* border: 1px solid red; */
+    display: flex;
+  }
+  .profileHeadings {
+    margin-top: 18%;
+    margin-left: 13%;
+    width: 40%;
+    /* border: 1px solid red; */
+  }
+  .profileHeadings a button {
+    font-family: "Dancing Script";
+    font-size: 15px;
+    height: 1vh;
+    width: fit-content;
+  }
+  .profileHeadings a button::after {
+    display: none;
+  }
+  .deleteAccount {
+    margin-top: 24%;
+    margin-left: 4%;
+    width: 50vw;
+  }
+  .deleteAccount a img {
+    display: none;
+  }
+  .deleteAccount a {
+    font-size: 15px;
+    margin-bottom: 2%;
+    margin-left: 0%;
+  }
+  .subMenus {
+    margin-top: 5%;
+    width: 95%;
+    margin-left: 0%;
+  }
+  form {
+    padding: 0px;
+    margin-left: 0%;
+  }
+  label {
+    font-size: 13px;
+    width: 35vw;
+  }
+  input {
+    font-family: "Nueton";
+    font-size: 8px;
+  }
+  .profileContent a button {
+    margin-left: 10%;
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+   display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 50vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .profileName,
+  .profileEmail {
+    font-size: 18px;
+    font-family: "Nueton";
+    margin: 0;
+    padding: 0;
+  }
+  #profile {
+    display: grid;
+    width: 100%;
+    height: 100%;
+  }
+  .img #img {
+    margin-left: 25%;
+  }
+  .img {
+    width: 95%;
+  }
+  .division {
+    display: none;
+  }
+  .profileLinks {
+    margin-bottom: 5%;
+    /* border: 1px solid red; */
+    display: flex;
+  }
+  .profileHeadings {
+    margin-top: 18%;
+    margin-left: 23%;
+    width: 40%;
+    /* border: 1px solid red; */
+  }
+  .profileHeadings a button {
+    font-family: "Dancing Script";
+    font-size: 18px;
+    height: 1vh;
+    width: fit-content;
+  }
+  .profileHeadings a button::after {
+    display: none;
+  }
+  .deleteAccount {
+    margin-top: 22%;
+    margin-left: 4%;
+    width: 50vw;
+  }
+  .deleteAccount a img {
+    display: none;
+  }
+  .deleteAccount a {
+    margin-bottom: 2%;
+    margin-left: 0%;
+  }
+  .subMenus {
+    margin-top: 5%;
+    width: 95%;
+  }
+  form {
+    padding: 0px;
+    margin-left: 0%;
+    /* border: 1px solid red; */
+  }
+  label {
+    width: 35vw;
+  }
+  input {
+    font-family: "Nueton";
+    font-size: 10px;
+  }
+  .profileContent a button {
+    margin-left: 10%;
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 8vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+   display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 40vw;
+    height: 50vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .profileName,
+  .profileEmail {
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  #profile {
+    display: grid;
+    width: 100%;
+    height: 100%;
+  }
+  .img #img {
+    margin-left: 30%;
+  }
+  .img {
+    width: 95%;
+  }
+  .division {
+    display: none;
+  }
+  .profileLinks {
+    margin-bottom: 5%;
+    /* border: 1px solid red; */
+    display: flex;
+  }
+  .profileHeadings {
+    margin-top: 15%;
+    margin-left: 23%;
+    width: 35%;
+    /* border: 1px solid red; */
+  }
+  .profileHeadings a button {
+    font-family: "Dancing Script";
+    font-size: 20px;
+    height: 1vh;
+    width: fit-content;
+  }
+  .profileHeadings a button::after {
+    display: none;
+  }
+  .deleteAccount {
+    margin-top: 18%;
+    margin-left: 4%;
+    width: 50vw;
+  }
+  .deleteAccount a img {
+    display: none;
+  }
+  .deleteAccount a {
+    margin-bottom: 2%;
+    margin-left: 0%;
+  }
+  .subMenus {
+    margin-top: 5%;
+    width: 95%;
+  }
+  form {
+    padding: 0px;
+    margin-left: 0%;
+    /* border: 1px solid red; */
+  }
+  label {
+    width: 35vw;
+  }
+  input {
+    font-family: "Nueton";
+    font-size: 10px;
+  }
+  .profileContent a button {
+    margin-left: 10%;
+    margin-top: 3%;
+  }
+}

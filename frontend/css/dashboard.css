@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nueton";
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  background-size: inherit;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+  font-family: monospace;
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Dancing Script";
+}
+.navigationLinks2 {
+  /* margin-top: 1%; */
+  width: 50vw;
+  margin-left: 15%;
+}
+.dropdown {
+  margin-left: 1%;
+  width: 8.7vw;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  width: 20vw;
+  height: 40vh;
+  border-radius: 10px;
+  border-style: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdown:hover .dropdown-menu {
+  padding: 20px;
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdown:hover .dropdown-menu a {
+  background: none;
+  color: black;
+  font-size: 20px;
+  width: 30vw;
+}
+.dropdownorg {
+  width: fit-content;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu-org {
+  width: 10vw;
+  height: 20vh;
+  border: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu-org img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdownorg:hover .dropdown-menu-org {
+  /* padding: 20px; */
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdownorg:hover .dropdown-menu-org a {
+  background: none;
+  color: black;
+  font-size: 30px;
+  width: 40vw;
+}
+/* .navigationLinks2 a::after{
+      content: "";
+      display: block;
+      width: 0.5;
+      height: 2px; 
+      background-color: grey;
+      position: relative;
+      bottom: 0;
+      left: 0;
+  } */
+
+.navigationLinks2 a button {
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: none;
+  font-weight: bold;
+  width: max-content;
+  font-family: "Nueton";
+  height: 6vh;
+  font-size: 16px;
+  color: black;
+}
+.navigationLinks2 a img {
+  width: 2vw;
+  height: auto;
+}
+.navigationLinks2 a button:hover {
+  background-color: skyblue;
+}
+.navigationLinks3 {
+  /* border: 1px solid red; */
+  margin-left: 10%;
+  gap: 7px;
+  display: flex;
+}
+.links {
+  display: none;
+}
+h1 {
+  font-size: 25px;
+  margin-top: 10%;
+  margin-bottom: 3%;
+  font-family: "Dancing Script";
+  text-align: center;
+  color: black;
+}
+form {
+  background-color: aliceblue;
+  border-radius: 40px;
+  margin-top: 5%;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.display {
+  display: grid;
+}
+.img {
+  border: 1px solid grey;
+  display: inline;
+  margin-left: 4%;
+  width: 20vw;
+  height: 100%;
+}
+
+.img #img {
+  margin-top: 10%;
+  margin-left: 10%;
+  /* padding: 20px; */
+  height: 200px;
+  border: none;
+  width: 200px;
+  border-radius: 200px;
+  background-color: aliceblue;
+}
+.img button img {
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+}
+.profileHeadings {
+  /* border: 1px solid red; */
+  width: 15vw;
+  border-radius: 10px;
+  margin-top: 30%;
+  height: fit-content;
+  margin-left: 10%;
+  padding: 20px;
+}
+.profileHeadings a button {
+  background-color: aliceblue;
+  width: 10vw;
+  border: none;
+  height: 5vh;
+  font-family: "Nueton";
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+}
+.profileHeadings a button::after {
+  margin-left: 3%;
+  content: "";
+  display: grid;
+  width: 1;
+  height: 1px;
+  background-color: #301af1;
+}
+.img input {
+  margin-right: 30%;
+}
+.subMenus {
+  display: inline;
+  padding: 20px;
+  width: 60%;
+  height: 100%;
+  margin-left: 7%;
+  border-radius: 20px;
+}
+.noticeForDoctors{
+  margin-top: 30%;
+}
+.noticeNotice{
+  color: navy;
+}
+.profileContent {
+  display: none;
+  margin-left: 5%;
+  padding: 20px;
+  /* border: 1px solid red; */
+  width: 70%;
+  height: 100%;
+}
+.profileName {
+  color: black;
+  margin-top: 5%;
+  font-family: "Dancing Script";
+  font-size: 25px;
+}
+.profileEmail {
+  text-align: center;
+  color: black;
+  font-family: "Dancing Script";
+  margin-top: 5%;
+  font-size: 25px;
+}
+label {
+  color: #301af1;
+  font-weight: 4500;
+  font-family: "Dancing Script";
+  font-size: 23px;
+}
+input {
+  font-size: 20px;
+  padding: 20px;
+  width: 20vw;
+  height: 9vh;
+  background: none;
+  height: 0;
+  font-family: "Dancing Script";
+  border: none;
+  color: black;
+  border-bottom: 1px solid black;
+  outline: 0;
+  border-radius: 2px;
+}
+.phoneDob {
+  display: flex;
+}
+.another {
+  display: flex;
+}
+.experience {
+  display: flex;
+}
+.email,
+.age,
+.home_address,
+.years_of_experience {
+  margin-left: 15%;
+}
+#profile {
+  display: flex;
+}
+.profileContent h1 {
+  margin-top: 3%;
+}
+.profileContent a button {
+  border: none;
+  font-size: 23px;
+  border-radius: 6px;
+  margin-left: 70%;
+  width: 10vw;
+  height: 5vh;
+  margin-top: 4%;
+  font-family: "Neuton";
+  color: white;
+  background-color: #301af1;
+  text-decoration: none;
+}
+.chooseRole {
+  display: grid;
+  margin-top: 2%;
+}
+
+select {
+  font-size: 23px;
+  color: black;
+  font-family: "Dancing Script";
+  margin-left: 5%;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 9px;
+}
+option {
+  text-align: center;
+}
+.subMenus .yourDoctors {
+  margin-top: 128%;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.subMenus .yourKits {
+  margin-top: 5%;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.yourDoctors h1 {
+  font-size: 25px;
+}
+.yourKits h1 {
+  font-size: 25px;
+}
+.navigationLinks3 button {
+  border: none;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  height: 6vh;
+  width: 7vw;
+}
+.navigationLinks3 .button {
+  margin-top: 1%;
+  color: white;
+  border-radius: 18px;
+  background-color: rgb(4, 4, 85);
+}
+.navigationLinks3 button:hover {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+/* .navigationLinks3 .button2 {
+    margin-top: 1%;
+    color: white;
+    background-color: #5340ff;
+  } */
+
+.footerSection {
+  margin-top: 5%;
+  display: flex;
+  height: 40vh;
+  /* border: 1px solid red; */
+  width: 100%;
+  background-color: black;
+}
+.footerLinks {
+  display: flex;
+}
+.getStarted {
+  /* border: 1px solid red; */
+  padding: 20px;
+  width: 60%;
+}
+.getStartedp1 {
+  margin-top: 5%;
+  margin-left: 40%;
+  font-family: "Dancing Script";
+  font-weight: bold;
+  font-size: 55px;
+  color: white;
+}
+.getStartedp2 {
+  margin-left: 40%;
+  font-size: 20px;
+  font-family: "Neuton";
+  color: white;
+}
+.getStartedButton {
+  /* border: 1px solid red; */
+  padding: 20px;
+  width: 50%;
+}
+.getStartedButton a button {
+  font-size: 20px;
+  border-radius: 6px;
+  margin-left: 5%;
+  width: 25vh;
+  font-family: "Neuton";
+  height: 9vh;
+  margin-top: 8%;
+  color: black;
+  background-color: aliceblue;
+  text-decoration: none;
+}
+.unordered {
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 1px;
+  margin-top: 5%;
+  display: flex;
+}
+ul {
+  font-size: 8px;
+  padding-left: 70px;
+  margin-top: 1%;
+  list-style: none;
+  display: block;
+  float: left;
+}
+ul > a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  text-decoration: none;
+  font-size: 15px;
+}
+h6 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+footer .valenceLogo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  width: fit-content;
+  height: auto;
+  margin-left: 25%;
+}
+footer .valenceLogo a {
+  /* border: 1px solid red; */
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Dancing Script";
+  color: black;
+}
+
+.valenceLogo img {
+  width: 4vw;
+  margin-left: 15%;
+  height: auto;
+}
+.copywright ul {
+  width: 100%;
+}
+.copywright li {
+  margin-left: 40%;
+  margin-bottom: 3%;
+  font-size: 15px;
+}
+footer {
+  margin-top: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  .links {
+    background-color: lightblue;
+    width: 100vw;
+    height: 70vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  .links .loggedInLinks {
+    font-weight: bold;
+    color: navy;
+  }
+}

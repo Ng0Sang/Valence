@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kits Form</title>
+    <link rel="stylesheet" href="../css/kitsForm.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigationLinks1">
+        <a href="./index.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+      <!-- <div class="navigationLinks2"> -->
+      <!-- <a href="./views/ourDoctors.html"><button>Our-Doctors</button></a>
+        <a href="./views/kits.html"><button>Our Kits</button></a>
+        <a href="./index.html"><button>Join-the-Community</button></a>
+        <div class="dropdown">
+          <a href="./index.html">Personalized Care</a>
+          <div class="dropdown-menu">
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />Diabetic Care</a
+            >
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />Hypertensive Care</a
+            >
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />Blood Pressure Care</a
+            >
+            <a href="/views/valenceHealthApp.html"
+              ><img src="../images/zigzag_6399395.png" />HIV/AIDS Care</a
+            >
+          </div>
+        </div> -->
+      <!-- </div>  -->
+      <div class="navigationLinks3">
+        <!-- <a href="../views/contactUs.html"
+          ><button class="button1">Log in</button></a
+        >
+        <a href="../views/aboutUs.html"
+          ><button class="button1">About Us</button></a
+        > -->
+        <a href="./views/login.html"
+          ><button class="button1">Log Out</button></a
+        >
+      </div>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <div class="hamburgerMenuBar"></div>
+      <div class="hamburgerMenuBar"></div>
+      <div class="hamburgerMenuBar"></div>
+      <div class="hamburgerMenuBar"></div>
+    </div>
+    <h1>Add Kit</h1>
+    <section class="kitForm">
+      <form
+        id="addKit"
+        action="/kit/createkit"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="name"
+          >Name <br />
+          <input type="text" id="name" name="name" placeholder="kit name"
+        /></label>
+        <label for="price"
+          >Kit Price <br />
+          <input type="text" id="price" name="price" placeholder="price"
+        /></label>
+        <label for="kitImage"
+          >Kit Image <br />
+          <input type="file" id="kitImage" name="kitImage"
+        /></label>
+        <label for="description"
+          >Kit Description <br />
+          <input type="text" id="description" name=""
+        /></label>
+
+        <button type="submit">Add Kit</button>
+      </form>
+    </section>
+  </body>
+  <script src="../js/kitsForm.js"></script>
+</html>

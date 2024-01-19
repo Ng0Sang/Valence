@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contactUs.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigationLinks1">
+        <a href="../index.html"
+          ><img src="../images/logo2.png" alt="" /><br />VALENCE</a
+        >
+      </div>
+      <div class="navigationLinks2">
+        <a href="../views/ourDoctors.html"
+          ><button>
+            <img src="../images/nurse_7024848.png" alt="" />Our Doctors
+          </button></a
+        >
+        <a href="../views/kits.html"
+          ><button>
+            <img src="../images/equipment_5986725.png" alt="" />Our Kits
+          </button></a
+        >
+        <a href="#"
+          ><button>
+            <img src="../images/link_4948833.png" alt="" />Join the Community
+          </button></a
+        >
+        <a href="">
+          <div class="dropdown">
+            <a href="#"
+              ><button>
+                <img
+                  src="../images/user-protection_8184375.png"
+                  alt=""
+                />Personalized Care
+              </button></a
+            >
+            <div class="dropdown-menu">
+              <a href="../views/diabeticCare.html"
+                ><img src="../images/right-down_5712572.png" />Diabetic Care</a
+              >
+              <a href="../views/diabeticCare.html"
+                ><img src="../images/right-down_5712572.png" />Hypertensive
+                Care</a
+              >
+              <a href="../views/diabeticCare.html"
+                ><img src="../images/right-down_5712572.png" />Blood Pressure
+                Care</a
+              >
+              <a href="../views/diabeticCare.html"
+                ><img src="../images/right-down_5712572.png" />HIV/AIDS Care</a
+              >
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="dropdownorg">
+            <a href="#"
+              ><button>
+                <img
+                  src="../images/user-protection_8184375.png"
+                  alt=""
+                />Support
+              </button></a
+            >
+            <div class="dropdown-menu-org">
+              <a href="../views/contactUs.html"
+                ><button>
+                  <img src="../images/right-down_5712572.png" alt="" />Contact
+                  Us
+                </button></a
+              >
+              <a href="../views/aboutUs.html"
+                ><button>
+                  <img src="../images/right-down_5712572.png" alt="" />About Us
+                </button></a
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="navigationLinks3">
+        <a href="./login.html"><button class="button1">Log in</button></a>
+        <a href="./signUp.html"><button class="button2">Sign Up</button></a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="hamburgerMenuBar"></div>
+        <div class="links">
+          <a href="../views/login.html" class="login">Log In</a>
+          <a href="../views/signUp.html" class="signup">Sign Up</a>
+          <a href="../views/ourDoctors.html">Our Doctors</a>
+          <a href="../views/kits.html">Our Kits</a>
+          <a href="../views/joinCommunity.html">Join the Community</a>
+          <a href="../views/diabeticCare.html">Personalized Care</a>
+          <a href="../views/aboutUs.html" class="lastLinka">About Us</a>
+        </div>
+      </div>
+    </nav>
+    <section class="complain">
+      <form id="complain">
+        <h1>CONTACT US</h1>
+        <!-- <p>Talk to us with your observations, suggestions, problems, and questions.</p> -->
+        <label for="name"
+          >Name <span>*</span> <br /><input
+            type="text"
+            placeholder="Jane Doe"
+            id="name" /></label
+        ><br /><br /><br /><br /><br />
+        <label for="email"
+          >Email <span>*</span> <br /><input
+            type="email"
+            placeholder="abc@gmail.com"
+            id="name" /></label
+        ><br /><br /><br /><br /><br />
+        <label for="textArea"
+          >Your Input <span>*</span> <br /><textarea
+            name="Text Area"
+            id="Write your input here"
+            placeholder="Type in here"
+          ></textarea></label
+        ><br /><br />
+        <a href="mailto:daviddorcassangbot@gmail.com"
+          ><button type="submit" id="submitComplain" onclick="contactUs()">
+            Send
+          </button></a
+        >
+      </form>
+
+      <h2><i>OR</i></h2>
+
+      <section class="otherContact">
+        <p>
+          <a href="mailto:daviddorcassangbot@gmail.com"
+            ><span style="color: black">Email Us: </span
+            >daviddorcassangbot@gmail.com</a
+          >
+        </p>
+        <p>
+          <a href="https://wa.me/2349014124299"
+            ><span style="color: black">WhatsApp Us: </span>+2349014124299</a
+          >
+        </p>
+        <p>
+          <a href="tel:+2348119093435"
+            ><span style="color: black">Call Us: </span>+2348119093435</a
+          >
+        </p>
+      </section>
+    </section>
+  </body>
+  <script src="../js/contactUs.js"></script>
+  <footer>
+    <div class="footerSection">
+      <div class="getStarted">
+        <p class="getStartedp1">Get to Know us More</p>
+        <p class="getStartedp2">
+          Want to know more about Us, <br />
+          check out our About Page <br />
+          via this link.
+        </p>
+      </div>
+      <div class="getStartedButton">
+        <a href="./aboutUs.html"><button>About Us</button></a>
+      </div>
+    </div>
+
+    <div class="footerLinks">
+      <div class="unordered">
+        <ul>
+          <h6>ACTIVITIES</h6>
+          <br />
+          <a href="../views/ourDoctors.html">Meet Doctors</a
+          ><br />
+          <a href="../views/joinCommunity.html">Join Conversation</a
+          ><br />
+          <a href="../views/kits.html">Kit</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>App</h6>
+          <br />
+          <a href="./aboutUs.html">About Us</a
+          ><br />
+          <a href="">Collections</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>SUPPORT</h6>
+          <br />
+          <a href="">Help Center</a
+          ><br />
+        </ul>
+        <ul>
+          <h6>INFORMATION</h6>
+          <br />
+          <a href="">Privacy Policy</a
+          ><br />
+          <a href="">Terms Of Use</a
+          ><br />
+        </ul>
+      </div>
+      <div class="valenceLogo">
+        <a href="../index.html">VALENCE</a>
+        <img src="../images/logo2.png" alt="" />
+      </div>
+    </div>
+    <div class="copywright">
+      <ul>
+        <li>@2023 VALENCE</li>
+      </ul>
+    </div>
+  </footer>
+</html>

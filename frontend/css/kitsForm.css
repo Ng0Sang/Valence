@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nueton";
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  background-size: inherit;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: blue;
+  color: black;
+  border: none;
+  outline: none;
+  position: fixed;
+  border: 1px solid green;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.hamburgerMenuBar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 13%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+  font-family: Nueton;
+}
+.navigationLinks1 {
+  margin-top: 1%;
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.navigationLinks1 a{
+  font-family: "Dancing Script";
+  font-size: 25px;
+  font-weight: bold;
+}
+/* .navigationLinks2 a::after{
+    content: "";
+    display: block;
+    width: 0.5;
+    height: 2px; 
+    background-color: grey;
+    position: relative;
+    bottom: 0;
+    left: 0;
+} */
+.navigationLinks3 {
+  margin-right: 5%;
+}
+.navigationLinks3 button {
+  border: none;
+  font-size: 18px;
+  background: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  height: 6vh;
+  background-color: navy;
+  width: 7vw;
+  color: white;
+}
+.kitForm {
+  margin-right: 15%;
+  display: flex;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+h1 {
+  margin-top: 8%;
+  text-align: center;
+  color: #5340ff;
+}
+.kitForm form {
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 30px;
+  margin-left: 20%;
+  width: 50%;
+  height: 73vh;
+  display: grid;
+}
+input {
+  border-color: #5340ff;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  padding: 20px;
+  font-size: 25px;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 20px;
+}
+input::placeholder {
+  font-size: 15px;
+}
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+button {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  border: hidden;
+  border-radius: 20px;
+  width: 10vw;
+  height: 6vh;
+  margin-top: 3%;
+  margin-left: 25%;
+  background-color: rgba(69, 69, 253, 0.904);
+}
+@media screen and (max-width: 600px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+  }
+  .navigationLinks3{
+    margin-top: 2%;
+  }
+  .navigationLinks3 button{
+    width: 13vw;
+    font-family: Dancing Script;
+    font-size: 20px;
+    font-weight: lighter;
+    border-radius: 5px;
+  }
+  h1{
+    margin-top: 20%;
+    color: black;
+    font-family: "Dancing Script";
+    font-size: 25px;
+  }
+  .kitForm form{
+    width: 100%;
+    height: 100%;
+    margin-left: 1%;
+    margin-bottom: 5%;
+  }
+  input{
+    width: 50vw;
+  }
+  button{
+  height: 8vh;
+    width: 20vw;
+  }
+}
+

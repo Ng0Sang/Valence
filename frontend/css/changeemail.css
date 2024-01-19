@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nueton";
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+  background-size: inherit;
+}
+.navigation {
+  padding: 20px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: fit-content;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation a {
+  text-decoration: none;
+  color: black;
+  margin-top: 4%;
+  font-size: 18px;
+  font-family: monospace;
+}
+.navigationLinks1 {
+  margin-left: 2%;
+}
+.navigationLinks1 a {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Dancing Script";
+}
+.navigationLinks1 img {
+  margin-left: 15%;
+  width: 4vw;
+  height: auto;
+}
+.navigationLinks2 {
+  /* border: 1px solid red; */
+  width: 90vw;
+  margin-left: 20%;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: aliceblue;
+  color: black;
+  height: 8vh;
+  border: none;
+  outline: none;
+  border: 1px solid #5340ff;
+  z-index: 1000;
+}
+.hamburgerMenuBar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  margin: 3px 0;
+}
+.links {
+  display: none;
+}
+.dropdown {
+  width: 8.7vw;
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  width: 20vw;
+  height: fit-content;
+  border-radius: 10px;
+  border-style: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu img {
+  width: 2vw;
+  height: 4vh;
+}
+
+.dropdown:hover .dropdown-menu {
+  padding: 20px;
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdown:hover .dropdown-menu a {
+  background: none;
+  color: black;
+  font-size: 15px;
+  width: 30vw;
+}
+.dropdownorg {
+  width: 8.7vw;
+  margin-top: 1%;
+  margin-left: 1%;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu-org {
+  border-radius: 10px;
+  width: 10vw;
+  height: fit-content;
+  border: outset;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-menu-org img {
+  width: 2vw;
+  height: 4vh;
+}
+.dropdownorg:hover .dropdown-menu-org {
+  background-color: aliceblue;
+  display: grid;
+}
+.dropdownorg:hover .dropdown-menu-org a {
+  background: none;
+  color: black;
+  font-size: 15px;
+}
+/* .navigationLinks2 a::after{
+        content: "";
+        display: block;
+        width: 0.5;
+        height: 2px; 
+        background-color: grey;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    } */
+.navigationLinks2 a button {
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
+  border: none;
+  /* border: 1px solid grey; */
+  border-color: grey;
+  font-weight: 600;
+  font-family: "Nueton";
+  width: max-content;
+  height: 6vh;
+  font-size: 13px;
+  color: black;
+}
+.navigationLinks2 a img {
+  width: 2vw;
+  height: auto;
+}
+.navigationLinks2 a button:hover {
+  background-color: skyblue;
+}
+.navigationLinks3 {
+  margin-right: 3%;
+  /* border: 1px solid red; */
+}
+.navigationLinks3 button {
+  transition: 1s;
+  border: none;
+  font-size: 13px;
+  background: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 25px;
+  height: 7vh;
+  width: 8vw;
+}
+.navigationLinks3 button:hover {
+  border-radius: 20px;
+  transform: scale(1, 1);
+  background-color: black;
+}
+.navigationLinks3 .button2 {
+  margin-top: 1%;
+  color: white;
+  background-color: rgb(4, 4, 85);
+}
+.email {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+form {
+  background-color: aliceblue;
+  border-radius: 40px;
+  display: grid;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+  margin-left: 30%;
+  margin-top: 10%;
+  margin-right: 5%;
+}
+.oldEmailError {
+  color: red;
+  font-size: 20px;
+}
+.newEmailError {
+  color: red;
+  font-size: 20px;
+}
+h1 {
+  font-size: 30px;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  margin-left: 30%;
+  font-family: "Dancing Script";
+  color: black;
+}
+label {
+  color: #5340ff;
+  font-size: 20px;
+  font-family: "Nueton";
+}
+input {
+  font-size: 16px;
+  padding: 20px;
+  width: 40vw;
+  height: 9vh;
+  border: none;
+  border: 1px solid grey;
+  color: black;
+  border-radius: 10px;
+}
+input::placeholder {
+  font-size: 15px;
+}
+a button {
+  /* margin-left: 5%; */
+  font-weight: bold;
+  font-family: "Dancing Script";
+  color: white;
+  font-size: 20px;
+  border: hidden;
+  border-radius: 10px;
+  width: 40vw;
+  height: 6vh;
+  margin-top: 2%;
+  background-color: rgba(69, 69, 253, 0.904);
+}
+@media only screen and (max-width: 399px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+   display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 50vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  form {
+    margin-left: 20%;
+    margin-top: 20%;
+    width: 70%;
+  }
+  input {
+    font-size: 10px;
+    width: 50vw;
+  }
+  label{
+    font-size: 13px;
+  }
+  form a button {
+    width: 50vw;
+  }
+  h1 {
+    margin-top: 25%;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+   display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 50vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  form {
+    margin-left: 20%;
+    margin-top: 20%;
+    width: 70%;
+  }
+  input {
+    font-size: 13px;
+    width: 50vw;
+  }
+  form a button {
+    width: 50vw;
+  }
+  h1 {
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .navigationLinks1 {
+    margin-left: 3%;
+  }
+  .navigationLinks1 a {
+    font-size: 20px;
+  }
+  .navigationLinks1 img {
+    width: 10vw;
+    height: auto;
+    margin-left: 10%;
+  }
+  .navigationLinks2 {
+    display: none;
+  }
+  .navigationLinks3 {
+   display: none;
+  }
+  .hamburger {
+    overflow-y: visible;
+    display: block;
+  }
+  .links {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 50vh;
+  }
+  .links a {
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Nueton";
+  }
+  .links .lastLinka {
+    margin-bottom: 5%;
+  }
+  .links .dropdown {
+    margin-left: 10%;
+  }
+  form {
+    margin-left: 20%;
+    margin-top: 20%;
+    width: 70%;
+  }
+  input {
+    width: 50vw;
+  }
+  form a button {
+    width: 50vw;
+  }
+  h1 {
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+}
