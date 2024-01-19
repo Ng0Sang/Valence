@@ -33,13 +33,10 @@ addKitsForm.addEventListener("submit", async (event) => {
   // console.log(data);
 
   try {
-    const response = await fetch(
-      "https://valence-j2y3.onrender.com/kit/createkit/",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
+    const response = await fetch("http://localhost:3000/kit/createkit/", {
+      method: "POST",
+      body: formData,
+    });
 
     if (response.status === 201) {
       alert("Kit added successfully.");

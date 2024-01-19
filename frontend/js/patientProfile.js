@@ -58,7 +58,7 @@ async function updatePatient() {
     };
 
     const updateResponse = await fetch(
-      `https://valence-j2y3.onrender.com/user/updatepatient/${user_id}`,
+      `http://localhost:3000/user/updatepatient/${user_id}`,
       {
         method: "PATCH",
         headers: {

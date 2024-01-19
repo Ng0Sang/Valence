@@ -7,7 +7,7 @@ viewKits.addEventListener("submit", (event) => {
 
 async function fetchKits() {
   try {
-    const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
+    const response = await fetch(`http://localhost:3000/kit/`);
 
     if (response.ok) {
       const data = await response.json();

@@ -17,7 +17,7 @@ async function searchKit() {
 
   try {
     const response = await fetch(
-      `https://valence-j2y3.onrender.com/kit/getsinglekit/${searchInput}`
+      `http://localhost:3000/kit/getsinglekit/${searchInput}`
     );
 
     if (response.ok) {
@@ -51,23 +51,23 @@ async function searchKit() {
 }
 
 // document.addEventListener("DOMContentLoaded", function () {
-  async function fetchKits() {
-    try {
-      const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
+async function fetchKits() {
+  try {
+    const response = await fetch(`http://localhost:3000/kit/`);
 
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
 
-        const kitContainer = document.getElementById("kitts");
+      const kitContainer = document.getElementById("kitts");
 
-        if (data && typeof Array) {
-          if (data && data.length > 0) {
-            data.forEach((kit) => {
-              sessionStorage.setItem("kit_id", kit.kit_id);
-              sessionStorage.setItem("kit_price", kit.price);
-              const kit_id = sessionStorage.getItem("kit_id");
-              const kitHTML = `
+      if (data && typeof Array) {
+        if (data && data.length > 0) {
+          data.forEach((kit) => {
+            sessionStorage.setItem("kit_id", kit.kit_id);
+            sessionStorage.setItem("kit_price", kit.price);
+            const kit_id = sessionStorage.getItem("kit_id");
+            const kitHTML = `
             <div class="frameKit"  id="seedetails">
               <div class="kits">
               <div id="favouriteKit" onclick="addToFavourites('${kit_id}')"><img src = "../images/cartBGC2.png" alt = "Hello" /></div>
@@ -83,28 +83,28 @@ async function searchKit() {
                 </div>
                 `;
 
-              console.log(kitHTML);
-              console.log(kitContainer);
-              kitContainer.insertAdjacentHTML("beforeend", kitHTML);
+            // console.log(kitHTML);
+            // console.log(kitContainer);
+            kitContainer.insertAdjacentHTML("beforeend", kitHTML);
 
-              const kitt = document.querySelectorAll(".kitts");
-              const currentDoctor = kitt[kitt.length - 1];
-              currentDoctor.addEventListener("click", () => {
-                console.log("Kit", kit);
-                seeKitDetails(kit);
-              });
+            const kitt = document.querySelectorAll(".kitts");
+            const currentDoctor = kitt[kitt.length - 1];
+            currentDoctor.addEventListener("click", () => {
+              console.log("Kit", kit);
+              seeKitDetails(kit);
             });
-          } else {
-            console.error("Invalid data structure received from the server.");
-          }
+          });
         } else {
-          console.error(`Error fetching kit: ${response.status}`);
+          console.error("Invalid data structure received from the server.");
         }
+      } else {
+        console.error(`Error fetching kit: ${response.status}`);
       }
-    } catch (error) {
-      console.error("An error occurred:", error);
     }
+  } catch (error) {
+    console.error("An error occurred:", error);
   }
+}
 
 // });
 fetchKits();
@@ -170,14 +170,11 @@ async function addToFavourites(kit_id) {
     // alert("user Id", user_id)
     // alert("kit Id", kit_id)
     try {
-      const response = await fetch(
-        `https://valence-j2y3.onrender.com/kit/addfavourite/`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(favouriteData),
-        }
-      );
+      const response = await fetch(`http://localhost:3000/kit/addfavourite/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(favouriteData),
+      });
 
       if (response.status === 201) {
         alert("Favourite added sucessfully");
@@ -310,7 +307,7 @@ if (userId) {
 // //     // const token = sessionStorage.getItem("token");
 // //     // console.log("token", token);
 // //     const response = await fetch(
-// //       `https://valence-j2y3.onrender.com/user/getsinglepatient/${user_id}`
+// //       `http://localhost:3000/user/getsinglepatient/${user_id}`
 // //     );
 // //     if (token) {
 // //       const footer = document.querySelector(".footerSection");
@@ -373,7 +370,7 @@ hamburger.addEventListener("click", function () {
 
 // async function displayDetails() {
 //   // const
-//   const kitDetails = await fetch(`https://valence-j2y3.onrender.com/getsinglekit/${kit_id}`)
+//   const kitDetails = await fetch(`http://localhost:3000/getsinglekit/${kit_id}`)
 // }
 
 //   const modalContent = document.getElementsByClassName("modal-text");

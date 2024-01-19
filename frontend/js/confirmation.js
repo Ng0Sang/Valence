@@ -71,13 +71,10 @@ verifyDoctor.addEventListener("submit", async (event) => {
   // console.log(data);
 
   try {
-    const response = await fetch(
-      `https://valence-j2y3.onrender.com/doctor/verifydoctor`,
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
+    const response = await fetch(`http://localhost:3000/doctor/verifydoctor`, {
+      method: "POST",
+      body: formData,
+    });
 
     if (response.status === 201) {
       alert("Your  Details stored successfully.");
