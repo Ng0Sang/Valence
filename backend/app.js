@@ -15,30 +15,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.get("/", async (req, res) => {
-//   try {
-//     res.sendFile(`${__dirname}`, 'public');
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
 
-// console.log(path.join(`${__dirname}`, 'public/views/login'));
-
-// app.get("/login", async (req, res) => {
-//   try {
-//     console.log("welcome to valence");
-//     res.sendFile(path.join(`${__dirname}`, 'public/views/login'));
-//     res.end();
-//   } catch (err) {
-//     console.log(err);
-//   }
-// });
-
-app.use("/auth", Auth);
-app.use("/user", userRoutes);
-app.use("/kit", kit);
-app.use("/doctor", doctorsRoutes);
+app.use("/auth",cors(), Auth);
+app.use("/user",cors(), userRoutes);
+app.use("/kit",cors(), kit);
+app.use("/doctor",cors(), doctorsRoutes);
 
 app.use((req, res, next) => {
   var err = new Error("Not Found");
