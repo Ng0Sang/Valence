@@ -72,7 +72,7 @@ verifyDoctor.addEventListener("submit", async (event) => {
 
   try {
     const response = await fetch(
-      `https://valence-j2y3.onrender.com/doctor/verifydoctor`,
+      `https://valence-w73c.onrender.com/doctor/verifydoctor`,
       {
         method: "POST",
         body: formData,

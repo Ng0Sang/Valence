@@ -83,7 +83,7 @@ async function changePassword() {
     const data = { currentPassword, newPassword };
 
     const response = await fetch(
-      `https://valence-j2y3.onrender.com/auth/changepassword/${user_id}`,
+      `https://valence-w73c.onrender.com/auth/changepassword/${user_id}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function cart() {
     try {
       const response = await fetch(
-        `htp://localhost:3000/kit/getfavouritekit/${sessionStorage.getItem(
+        `https://valence-w73c.onrender.com/kit/getfavouritekit/${sessionStorage.getItem(
           "email"
         )}`
       );

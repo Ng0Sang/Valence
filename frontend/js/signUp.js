@@ -101,7 +101,7 @@ async function signUpUser() {
   // console.log(data);
   try {
     const response = await fetch(
-      `https://valence-j2y3.onrender.com/auth/signup`,
+      `https://valence-w73c.onrender.com/auth/signup`,
       {
         method: "POST",
         headers: {

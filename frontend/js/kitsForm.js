@@ -34,7 +34,7 @@ addKitsForm.addEventListener("submit", async (event) => {
 
   try {
     const response = await fetch(
-      "https://valence-j2y3.onrender.com/kit/createkit/",
+      "https://valence-w73c.onrender.com/kit/createkit/",
       {
         method: "POST",
         body: formData,

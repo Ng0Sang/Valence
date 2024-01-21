@@ -61,7 +61,7 @@ async function updateDoctor() {
     };
 
     const updateResponseD = await fetch(
-      `https://valence-j2y3.onrender.com/doctor/updatedoctor/${user_id}`,
+      `https://valence-w73c.onrender.com/doctor/updatedoctor/${user_id}`,
       {
         method: "PATCH",
         headers: {

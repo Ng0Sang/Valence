@@ -17,7 +17,7 @@ async function searchKit() {
 
   try {
     const response = await fetch(
-      `https://valence-j2y3.onrender.com/kit/getsinglekit/${searchInput}`
+      `https://valence-w73c.onrender.com/kit/getsinglekit/${searchInput}`
     );
 
     if (response.ok) {
@@ -50,7 +50,7 @@ async function searchKit() {
 
 async function fetchKits() {
   try {
-    const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
+    const response = await fetch(`https://valence-w73c.onrender.com/kit/`);
 
     if (response.ok) {
       const data = await response.json();
@@ -157,7 +157,7 @@ async function addToFavourites(kit_id) {
     console.log(favouriteData);
     try {
       const response = await fetch(
-        `https://valence-j2y3.onrender.com/kit/addfavourite/`,
+        `https://valence-w73c.onrender.com/kit/addfavourite/`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -264,7 +264,6 @@ if (userId) {
   });
 }
 
-
 function seeDetails() {
   const modalButton = document.querySelectorAll("#seedetails");
   const modalcontainer = document.querySelector(".modal");
@@ -306,4 +305,3 @@ hamburger.addEventListener("click", function () {
     links.style.display = "none";
   }
 });
-

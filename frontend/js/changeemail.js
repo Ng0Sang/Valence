@@ -26,7 +26,7 @@ changeEmail.addEventListener("submit", (event) => {
       const data = { email };
 
       const response = await fetch(
-        `https://valence-j2y3.onrender.com/user/updateemail/${user_id}`,
+        `https://valence-w73c.onrender.com/user/updateemail/${user_id}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },

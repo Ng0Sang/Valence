@@ -36,7 +36,7 @@ document
 
     try {
       const response = await fetch(
-        `https://valence-j2y3.onrender.com/doctor/getsingledoctor/${searchInput}`
+        `https://valence-w73c.onrender.com/doctor/getsingledoctor/${searchInput}`
       );
 
       // console.log(response);
@@ -76,7 +76,7 @@ document
     // }
     try {
       const response = await fetch(
-        `https://valence-j2y3.onrender.com/kit/getsinglekit/${searchInput}`
+        `https://valence-w73c.onrender.com/kit/getsinglekit/${searchInput}`
       );
 
       if (response.ok) {
@@ -114,7 +114,7 @@ document
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchKits() {
     try {
-      const response = await fetch(`https://valence-j2y3.onrender.com/kit/`);
+      const response = await fetch(`https://valence-w73c.onrender.com/kit/`);
 
       if (response.ok) {
         const data = await response.json();
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   async function fetchDoctors() {
     try {
-      const response = await fetch(`https://valence-j2y3.onrender.com/doctor/`);
+      const response = await fetch(`https://valence-w73c.onrender.com/doctor/`);
 
       if (response.ok) {
         const docData = await response.json();
