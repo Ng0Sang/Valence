@@ -127,13 +127,13 @@ exports.forgotPassword = async (req, res) => {
       return res.status(401).json({ message: "Invalid Email" });
     }
     if (!password) {
-      return res.status(400).json({Message: "Password Required"})
+      return res.status(400).json({ Message: "Password Required" });
     }
 
-    const {user_id} = req.params;
+    const { user_id } = req.params;
     // const user_id = user.rows[0].user_id;
     // console.log(user_id);
-    
+
     const newPassword = await bcrypt.hash(password, 10);
     const result = await db.query(
       "UPDATE users SET  password = $1 WHERE user_id = $2 RETURNING *",

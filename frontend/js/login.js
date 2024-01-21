@@ -71,6 +71,8 @@ async function loginUsers() {
     password,
   };
 
+  // console.log(loginData);
+
   try {
     const response = await fetch(
       `https://valence-j2y3.onrender.com/auth/login`,
@@ -85,12 +87,12 @@ async function loginUsers() {
     const loginData = await response.json();
     console.log(loginData);
 
-    console.log(loginData);
+    // console.log(loginData);
     // const token = loginData.token;
     const name = loginData.name;
     const user_id = loginData.user_id;
     const role = loginData.role;
-    console.log(user_id);
+    // console.log(user_id);
     // console.log(token);
 
     // sessionStorage.setItem("loginToken", token);

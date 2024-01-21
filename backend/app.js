@@ -6,20 +6,31 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
 const { Auth, doctorsRoutes, userRoutes, kit } = require("./routes/index");
-app.use(express.static("./public"));
+//app.use(express.static("./public"));
 
 dotenv.config();
 app.use(morgan("tiny"));
-// app.options("*", cors());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://valence-three.vercel.app"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use("/auth", cors(), Auth);
+app.use("/user", cors(), userRoutes);
+app.use("/kit", cors(), kit);
+app.use("/doctor", cors(), doctorsRoutes);
 
-app.use("/auth",cors(), Auth);
-app.use("/user",cors(), userRoutes);
-app.use("/kit",cors(), kit);
-app.use("/doctor",cors(), doctorsRoutes);
+app.get(async (req, res) => {
+  try {
+    res.send("welcome");
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 app.use((req, res, next) => {
   var err = new Error("Not Found");
