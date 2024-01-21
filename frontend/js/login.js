@@ -71,7 +71,7 @@ async function loginUsers() {
     password,
   };
 
-  // console.log(loginData);
+ console.log(data);
 
   try {
     const response = await fetch(
